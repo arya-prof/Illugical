@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkingSpeed;
     [SerializeField] private float lookingSpeed;
     private float speed;
+    [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float gravity = -9.81f;
 
     private Vector3 _velocity;
@@ -31,9 +32,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         bool isGrounded = _controller.isGrounded;
+        Debug.Log(isGrounded);
         if (isGrounded && _velocity.y < 0)
         {
-            _velocity.y = 0f;
+            _velocity.y = -2f;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -42,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         _controller.Move(move * speed * Time.deltaTime);
+
+        if (Input.GetKeyDown("space") && isGrounded)
+        {
+            _velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
 
         _velocity.y += gravity * Time.deltaTime;
 

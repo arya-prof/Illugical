@@ -21,6 +21,7 @@ public class HandController : MonoBehaviour
     
     [SerializeField] private Image handCameraZone;
     [SerializeField] private GameObject handCameraUI;
+    [SerializeField] private GameObject handCameraTakePhoto;
     
     // CheckList
     [Header("Check List")]
@@ -41,6 +42,7 @@ public class HandController : MonoBehaviour
         
         handCamera.SetActive(true);
         handCameraUI.SetActive(false);
+        handCameraTakePhoto.SetActive(false);
         
         checkList.SetActive(false);
     }
@@ -86,10 +88,8 @@ public class HandController : MonoBehaviour
             if (handCameraStation != null)
             {
                 if (!handCameraStation.sActive) return;
-                if (_posDistance > .9f && _rotDistance < .3f)
-                {
-                    StartCoroutine(Camera_TakePhoto());
-                }
+                _delay = true;
+                StartCoroutine(Camera_TakePhoto());
             }
             return;
         }
@@ -170,9 +170,15 @@ public class HandController : MonoBehaviour
     }
     IEnumerator Camera_TakePhoto()
     {
-        handCameraStation.Activate();
-        handCameraZone.color = Color.cyan;
-        yield return null;
+        handCameraTakePhoto.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        handCameraTakePhoto.SetActive(false);
+        if (_posDistance > .9f && _rotDistance < .3f)
+        {
+            handCameraStation.Activate();
+            handCameraZone.color = Color.cyan;
+        }
+        _delay = false;
     }
     #endregion
 
