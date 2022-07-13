@@ -13,12 +13,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Hand/HandController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HandCameraSystem/HandCameraSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Hand/HandItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HandCameraSystem/IHdCmStation.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="2Bt1FsvZeOFXpS9R9emWuyPUZwr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -67,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657710525193</updated>
       <workItem from="1657710597263" duration="11076000" />
-      <workItem from="1657725118177" duration="630000" />
+      <workItem from="1657725118177" duration="635000" />
     </task>
     <servers />
   </component>
