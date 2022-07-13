@@ -1,17 +1,50 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HandCameraSystem : MonoBehaviour, IHdCmStation
 {
-
+    private SphereCollider collider;
     public Transform sTransform
     {
         get
         {
             return transform;
         }
+    }
+    public float sRadius
+    {
+        get
+        {
+            return collider.radius;
+        }
+    }
+
+    private bool _sActive;
+    public bool sActive
+    {
+        get
+        {
+            return _sActive;
+        }
+        set
+        {
+            _sActive = value;
+        }
+    }
+    [SerializeField] private bool sActiveOnStart;
+
+    [SerializeField] private UnityEvent _event;
+
+    public void Activate()
+    {
+        _event?.Invoke();
+    }
+
+    private void Start()
+    {
+        collider = GetComponent<SphereCollider>();
+
+        sActive = sActiveOnStart;
     }
 
     private void OnTriggerEnter(Collider other)
