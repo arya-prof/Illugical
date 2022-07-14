@@ -10,13 +10,21 @@ public class Lever : MonoBehaviour, IIntract
     [SerializeField] private bool repeatAble;
     [SerializeField] private Animator anim;
     [SerializeField] private float animTime;
-    
+
+    private bool _delay;
     private bool _open;
     public bool open
     {
         get
         {
-            return _open;
+            if (!_delay || _open)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         set
         {
@@ -26,6 +34,7 @@ public class Lever : MonoBehaviour, IIntract
 
     public void OnActivate()
     {
+        if (_delay) return;
         if(!open) return;
         if (eventsIndex >= events.Length) return;
 
@@ -34,6 +43,8 @@ public class Lever : MonoBehaviour, IIntract
 
     IEnumerator Activate()
     {
+        _delay = true;
+        
         events[eventsIndex]?.Invoke();
         anim.SetTrigger("activate");
         yield return new WaitForSeconds(animTime);
@@ -45,5 +56,7 @@ public class Lever : MonoBehaviour, IIntract
                 eventsIndex = 0;
             }
         }
+
+        _delay = false;
     }
 }

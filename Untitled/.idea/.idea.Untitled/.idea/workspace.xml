@@ -13,9 +13,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/Lever/Lever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/IDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ExtraFuntions/Func_PlayAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/Lever/IIntract.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2BtdR7O3gQaoUAN0OnTR65uTUdT" />
@@ -69,7 +78,7 @@
       <workItem from="1657768849706" duration="5102000" />
       <workItem from="1657795151727" duration="589000" />
       <workItem from="1657795831237" duration="2570000" />
-      <workItem from="1657798755331" duration="10050000" />
+      <workItem from="1657798755331" duration="12720000" />
     </task>
     <servers />
   </component>
