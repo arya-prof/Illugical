@@ -28,11 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
         speed = walkingSpeed;
     }
-
+    
     private void Update()
     {
         bool isGrounded = _controller.isGrounded;
-        Debug.Log(isGrounded);
         if (isGrounded && _velocity.y < 0)
         {
             _velocity.y = -2f;
