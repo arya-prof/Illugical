@@ -11,6 +11,7 @@ public class References : MonoBehaviour
     // Player
     public Transform cameraTransform;
     public List<Item> playerBackpack = new List<Item>();
+    public List<GameObject> playerBackpackUI = new List<GameObject>();
     public CharacterController playerController;
     public LayerMask itemLayer;
 

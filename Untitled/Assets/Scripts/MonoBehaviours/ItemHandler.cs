@@ -14,8 +14,8 @@ public class ItemHandler : MonoBehaviour
     }
 
     private void AddToUI(){
-        GameObject uiObject = Instantiate(References.Instance.itemUI);
-        uiObject.transform.parent = References.Instance.inventoryPanel.transform;
+        GameObject uiObject = Instantiate(References.Instance.itemUI, References.Instance.inventoryPanel.transform);
+        References.Instance.playerBackpackUI.Add(uiObject);
         uiObject.GetComponent<Image>().sprite = item.itemIcon;
     }
 }

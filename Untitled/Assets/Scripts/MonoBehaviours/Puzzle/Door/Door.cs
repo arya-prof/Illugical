@@ -57,7 +57,15 @@ public class Door : MonoBehaviour, IDoor
         {
             if (itemContaine)
             {
-                References.Instance.playerBackpack.Remove(item);
+                for (int i = 0; i < References.Instance.playerBackpack.Count; i++)
+                {
+                    if (item == References.Instance.playerBackpack[i])
+                    {
+                        References.Instance.playerBackpack.RemoveAt(i);
+                        Destroy(References.Instance.playerBackpackUI[i]);
+                        References.Instance.playerBackpackUI.RemoveAt(i);
+                    }
+                }
                 _lockOpened = true;
             }
         }
