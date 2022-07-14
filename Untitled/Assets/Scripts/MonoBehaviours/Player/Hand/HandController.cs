@@ -31,7 +31,7 @@ public class HandController : MonoBehaviour
     private bool checkListState;
     [SerializeField] private Animator checkListAnim;
 
-    public bool jumpAble
+    public bool HandControlleAble
     {
         get
         {
@@ -225,7 +225,13 @@ public class HandController : MonoBehaviour
             
             handCameraAnim.SetTrigger("watchPhoto");
             yield return new WaitForSeconds(2.4f);
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
         }
+        else
+        {
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
+        }
+
         _delay = false;
     }
     #endregion

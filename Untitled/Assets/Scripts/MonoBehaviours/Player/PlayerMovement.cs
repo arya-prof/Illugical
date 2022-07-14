@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown("space") && isGrounded)
         {
-            if (HandController.handController.jumpAble)
+            if (HandController.handController.HandControlleAble)
             {
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
