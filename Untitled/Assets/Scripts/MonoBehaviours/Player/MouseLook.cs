@@ -80,6 +80,22 @@ public class MouseLook : MonoBehaviour
                     References.Instance.itemPopup.text = "";
                 }
             }
+            
+            IIntract intract = hit.transform.gameObject.GetComponent<IIntract>();
+            if (intract != null)
+            {
+                if (intract.open)
+                {
+                    References.Instance.itemPopup.text = "Press E to use";
+                    if (Input.GetKeyDown(KeyCode.E)){
+                        intract.OnActivate();
+                    }
+                }
+                else
+                {
+                    References.Instance.itemPopup.text = "Unable to use";
+                }
+            }
         }
         else { // Every object that has Item layer must have ItemHandler
             References.Instance.itemPopup.text = "";
