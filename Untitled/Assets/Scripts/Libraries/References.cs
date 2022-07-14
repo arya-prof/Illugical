@@ -18,6 +18,7 @@ public class References : MonoBehaviour
     public TMP_Text itemPopup;
     public GameObject inventoryPanel;
     public GameObject itemUI;
+    public GameObject checklistPanel;
 
     private void Awake() {
         Instance = this;
