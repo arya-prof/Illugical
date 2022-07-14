@@ -8,12 +8,14 @@ public class HandController : MonoBehaviour
     
     private HandItem _handItem;
     private Animator handAnim;
+    [SerializeField] private Canvas mainCanvas;
 
     // Camera
     [Header("Hand Camera")]
     [SerializeField] private GameObject handCamera;
     private bool handCameraState;
     [SerializeField] private Animator handCameraAnim;
+    [SerializeField] private Renderer handCameraPhoto;
 
     public IHdCmStation handCameraStation;
     private float _posDistance;
@@ -21,13 +23,28 @@ public class HandController : MonoBehaviour
     
     [SerializeField] private Image handCameraZone;
     [SerializeField] private GameObject handCameraUI;
-    [SerializeField] private GameObject handCameraTakePhoto;
+    [SerializeField] private GameObject handCameraBlackScreen;
     
     // CheckList
     [Header("Check List")]
     [SerializeField] private GameObject checkList;
     private bool checkListState;
     [SerializeField] private Animator checkListAnim;
+
+    public bool jumpAble
+    {
+        get
+        {
+            if (!handCameraState && !checkListState)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 
     private bool _delay;
 
@@ -42,7 +59,7 @@ public class HandController : MonoBehaviour
         
         handCamera.SetActive(true);
         handCameraUI.SetActive(false);
-        handCameraTakePhoto.SetActive(false);
+        handCameraBlackScreen.SetActive(false);
         
         checkList.SetActive(false);
     }
@@ -85,12 +102,8 @@ public class HandController : MonoBehaviour
         // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
-            if (handCameraStation != null)
-            {
-                if (!handCameraStation.sActive) return;
-                _delay = true;
-                StartCoroutine(Camera_TakePhoto());
-            }
+            _delay = true;
+            StartCoroutine(Camera_TakePhoto());
             return;
         }
 
@@ -147,11 +160,14 @@ public class HandController : MonoBehaviour
             handCamera.SetActive(true);
             handCameraUI.SetActive(false);
             
+            yield return new WaitForSeconds(.5f);
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
+            
             handCameraState = false;
             handCameraAnim.SetBool("action", handCameraState);
             handCameraAnim.SetTrigger("active");
             
-            yield return new WaitForSeconds(1.1f);
+            yield return new WaitForSeconds(.5f);
         }
         else
         {
@@ -159,24 +175,56 @@ public class HandController : MonoBehaviour
             handCameraAnim.SetBool("action", handCameraState);
             handCameraAnim.SetTrigger("active");
             
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(.5f);
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.lookingSpeed;
+            
+            yield return new WaitForSeconds(.5f);
             
             handCamera.SetActive(false);
             handCameraUI.SetActive(true);
-            
-            yield return new WaitForSeconds(.1f);
         }
         _delay = false;
     }
     IEnumerator Camera_TakePhoto()
     {
-        handCameraTakePhoto.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
-        handCameraTakePhoto.SetActive(false);
+        bool photoTaken = false;
         if (_posDistance > .9f && _rotDistance < .3f)
         {
+            photoTaken = true;
+            mainCanvas.enabled = false;
+            yield return null;
+            string filePath = Application.dataPath + "takenPhoto.png";
+            ScreenCapture.CaptureScreenshot(filePath);
+            yield return new WaitForEndOfFrame();
+            mainCanvas.enabled = true;
+            
             handCameraStation.Activate();
-            handCameraZone.color = Color.cyan;
+            yield return null;
+        }
+        handCameraBlackScreen.SetActive(true);
+        yield return new WaitForSeconds(.25f);
+        if (photoTaken)
+        {
+            string filePath = Application.dataPath + "takenPhoto.png";
+            if (System.IO.File.Exists(filePath))
+            {
+                var bytes = System.IO.File.ReadAllBytes(filePath);
+                var tex = new Texture2D(1, 1);
+                tex.LoadImage(bytes);
+                handCameraPhoto.material.mainTexture = tex;
+            }
+        }
+        yield return new WaitForSeconds(.25f);
+        handCameraBlackScreen.SetActive(false);
+        if (photoTaken)
+        {
+            handCameraState = false;
+            
+            handCamera.SetActive(true);
+            handCameraUI.SetActive(false);
+            
+            handCameraAnim.SetTrigger("watchPhoto");
+            yield return new WaitForSeconds(2.4f);
         }
         _delay = false;
     }
@@ -188,10 +236,12 @@ public class HandController : MonoBehaviour
         checkListAnim.SetTrigger("state");
         if (checkListState)
         {
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
             checkListState = false;
         }
         else
         {
+            PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.lookingSpeed;
             checkListState = true;
         }
         yield return new WaitForSeconds(1.0f);
