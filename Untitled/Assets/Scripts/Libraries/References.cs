@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class References : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class References : MonoBehaviour
     public Transform cameraTransform;
     public List<Item> playerBackpack = new List<Item>();
     public LayerMask itemLayer;
-    public GameObject itemPopup;
+    public TMP_Text itemPopup;
 
     private void Awake() {
         Instance = this;
