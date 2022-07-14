@@ -33,10 +33,24 @@ public class HandCameraSystem : MonoBehaviour, IHdCmStation
     }
     [SerializeField] private bool sActiveOnStart;
 
+    private bool _sFinish;
+    public bool sFinish
+    {
+        get
+        {
+            return _sFinish;
+        }
+        set
+        {
+            _sFinish = value;
+        }
+    }
+
     [SerializeField] private UnityEvent _event;
 
     public void Activate()
     {
+        sFinish = true;
         _event?.Invoke();
     }
 
