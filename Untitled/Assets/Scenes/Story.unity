@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 43db8d13a3bd5cf42bd2bb99fa35f95d, type: 2}
+  m_sharedMaterial: {fileID: -817065632393211476, guid: 43db8d13a3bd5cf42bd2bb99fa35f95d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -304,9 +304,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 165034711}
   sentencs:
-  - '[CharacterName] is about 20 years old, he study archaeologist Now he decide
-    to look around into ancient forest in North of Iran He also brought his camera
-    with himself. '
+  - " It\u2019s 2003 "
+  - '[CharacterName] is about 20 years old, he study archaeologist He is working
+    on his education paper about archaeology Now he decide to look around into ancient
+    forest in North of Iran He also brought his camera with himself. '
   typingSpeed: 0.05
   continueButton: {fileID: 2087410824}
 --- !u!1 &747871004
@@ -709,7 +710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -168.01443}
+  m_AnchoredPosition: {x: -19, y: -104}
   m_SizeDelta: {x: 127.7923, y: 33.9538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087410826
@@ -790,8 +791,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CONTINUE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 43db8d13a3bd5cf42bd2bb99fa35f95d, type: 2}
+  m_sharedMaterial: {fileID: -817065632393211476, guid: 43db8d13a3bd5cf42bd2bb99fa35f95d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 5aee7a603f5e69f4db2a782e6274e509
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Edu VIC WA NT Beginner
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 27847ae6655b6004aa00e3640c7a9394, type: 3}
+  - {fileID: 12800000, guid: d129a010c27090a4286985830a2306ff, type: 3}
+  - {fileID: 12800000, guid: 40a89101909bf20468b4d2f4ea8d305e, type: 3}
+  - {fileID: 12800000, guid: 55f5e4bfdc71a8b488a10f119e26cc11, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
