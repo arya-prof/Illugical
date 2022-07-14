@@ -16,6 +16,8 @@ Insert gif or link to demo
 
 [AUT 2022 Finalizing Ideas](https://docs.google.com/document/d/1Z8FKyB8Vi86wWksAswbJaAqIHkYpLbjLFpmniHbSnqI/edit#heading=h.r3xqb5jp7vkq)
 
+[temp duc](https://docs.google.com/document/d/1egdLrIUu7ybkoN-4Me0T6HBHFpXwV-Rz0L7A06P-rb0)
+
 
 ## Authors
 
