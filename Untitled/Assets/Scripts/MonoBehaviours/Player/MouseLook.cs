@@ -23,16 +23,5 @@ public class MouseLook : MonoBehaviour
         
         transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
-
-        if (Input.GetKeyDown(KeyCode.E)){
-            Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            RaycastHit hit;
-            if (Physics.Raycast(_ray, out hit, 5f, References.Instance.itemLayer)){
-                ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
-                if (_itemHandler){
-                    _itemHandler.Pickup();
-                }
-            }
-        }
     }
 }
