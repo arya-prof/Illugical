@@ -70,7 +70,7 @@ public class HandController : MonoBehaviour
         if (handCameraStation != null)
         {
             if (!handCameraStation.sActive) return;
-            
+            if (handCameraStation.sFinish) return;
             Vector3 position = handCameraStation.sTransform.position + handCameraStation.sTransform.up * 2f;
             float distance = Vector3.Distance(transform.position, position);
             _posDistance = 1-(distance / handCameraStation.sRadius);
@@ -226,6 +226,8 @@ public class HandController : MonoBehaviour
             handCameraAnim.SetTrigger("watchPhoto");
             yield return new WaitForSeconds(2.4f);
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
+            
+            handCameraZone.transform.localScale = new Vector3(0,0, 0);
         }
         else
         {
