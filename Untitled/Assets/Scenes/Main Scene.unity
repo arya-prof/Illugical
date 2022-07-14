@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657624, g: 0.49641252, b: 0.57481426, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465766, g: 0.49641317, b: 0.5748151, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1892,7 +1892,7 @@ GameObject:
   - component: {fileID: 1671638813}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2526,6 +2526,14 @@ PrefabInstance:
     - target: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
       propertyPath: cameraTransform
       value: 
+      objectReference: {fileID: 1671638812}
+    - target: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
+      propertyPath: itemLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
+      propertyPath: playerBackpack.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}

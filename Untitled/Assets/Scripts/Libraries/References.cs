@@ -8,6 +8,8 @@ public class References : MonoBehaviour
 
     // Put your global values in here
     public Transform cameraTransform;
+    public List<Item> playerBackpack = new List<Item>();
+    public LayerMask itemLayer;
 
     private void Awake() {
         Instance = this;
