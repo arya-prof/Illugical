@@ -8,12 +8,16 @@ public class References : MonoBehaviour
 {
     public static References Instance { get; private set; }
 
-    // Put your global values in here
+    // Player
     public Transform cameraTransform;
     public List<Item> playerBackpack = new List<Item>();
     public CharacterController playerController;
     public LayerMask itemLayer;
+
+    // UI
     public TMP_Text itemPopup;
+    public GameObject inventoryPanel;
+    public GameObject itemUI;
 
     private void Awake() {
         Instance = this;
