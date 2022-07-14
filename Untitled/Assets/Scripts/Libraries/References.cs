@@ -11,6 +11,7 @@ public class References : MonoBehaviour
     // Put your global values in here
     public Transform cameraTransform;
     public List<Item> playerBackpack = new List<Item>();
+    public CharacterController playerController;
     public LayerMask itemLayer;
     public TMP_Text itemPopup;
 
