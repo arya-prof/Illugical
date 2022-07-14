@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class References : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class References : MonoBehaviour
     public Transform cameraTransform;
     public List<Item> playerBackpack = new List<Item>();
     public LayerMask itemLayer;
+    public GameObject itemPopup;
 
     private void Awake() {
         Instance = this;

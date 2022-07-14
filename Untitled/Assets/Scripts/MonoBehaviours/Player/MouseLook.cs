@@ -24,15 +24,24 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        if (Input.GetKeyDown(KeyCode.E)){
-            Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            RaycastHit hit;
-            if (Physics.Raycast(_ray, out hit, 5f, References.Instance.itemLayer)){
-                ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
-                if (_itemHandler){
+
+        // Item Pickup
+        Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        RaycastHit hit;
+        // Checks raycast
+        if (Physics.Raycast(_ray, out hit, 5f, References.Instance.itemLayer)){
+            ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
+            // If its an item
+            if (_itemHandler){ // Just to make sure it doesn't raise any error
+                // Show popup
+                References.Instance.itemPopup.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E)){
                     _itemHandler.Pickup();
                 }
             }
+        }
+        else { // Every object that has Item layer must have ItemHandler
+            References.Instance.itemPopup.SetActive(false);
         }
     }
 }
