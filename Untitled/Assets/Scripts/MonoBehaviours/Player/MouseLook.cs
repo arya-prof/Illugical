@@ -34,14 +34,14 @@ public class MouseLook : MonoBehaviour
             // If its an item
             if (_itemHandler){ // Just to make sure it doesn't raise any error
                 // Show popup
-                References.Instance.itemPopup.SetActive(true);
+                References.Instance.itemPopup.text = "E";
                 if (Input.GetKeyDown(KeyCode.E)){
                     _itemHandler.Pickup();
                 }
             }
         }
         else { // Every object that has Item layer must have ItemHandler
-            References.Instance.itemPopup.SetActive(false);
+            References.Instance.itemPopup.text = "";
         }
     }
 }
