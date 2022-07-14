@@ -9,9 +9,9 @@ public class PlayerMovement : MonoBehaviour
     
     private CharacterController _controller;
 
-    [SerializeField] private float walkingSpeed;
-    [SerializeField] private float lookingSpeed;
-    private float speed;
+    public float walkingSpeed;
+    public float lookingSpeed;
+    public float speed;
     [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float gravity = -9.81f;
 
@@ -47,7 +47,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown("space") && isGrounded)
         {
-            _velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            if (HandController.handController.jumpAble)
+            {
+                _velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            }
         }
 
         _velocity.y += gravity * Time.deltaTime;
