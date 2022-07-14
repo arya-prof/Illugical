@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemHandler : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class ItemHandler : MonoBehaviour
     public void Pickup(){
         References.Instance.playerBackpack.Add(item);
         Destroy(this.gameObject);
-        OnPickup();
+        AddToUI();
     }
 
-    private void OnPickup(){
-
+    private void AddToUI(){
+        GameObject uiObject = Instantiate(References.Instance.itemUI);
+        uiObject.transform.parent = References.Instance.inventoryPanel.transform;
+        uiObject.GetComponent<Image>().sprite = item.itemIcon;
     }
 }
