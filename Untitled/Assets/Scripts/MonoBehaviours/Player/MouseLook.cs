@@ -17,31 +17,6 @@ public class MouseLook : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void FixedUpdate()
-    {
-        if (!HandController.handController.HandControlleAble) return;
-        // Item Pickup
-        Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
-        // Checks raycast
-        if (Physics.Raycast(_ray, out hit, 2f, References.Instance.itemLayer)){
-            crossHair.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
-            ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
-            // If its an item
-            if (_itemHandler){ // Just to make sure it doesn't raise any error
-                // Show popup
-                References.Instance.itemPopup.text = "Press E to pickup";
-                if (Input.GetKeyDown(KeyCode.E)){
-                    _itemHandler.Pickup();
-                }
-            }
-        }
-        else { // Every object that has Item layer must have ItemHandler
-            References.Instance.itemPopup.text = "";
-            crossHair.transform.localScale = new Vector3(1,1,1);
-        }
-    }
-
     private void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
@@ -52,5 +27,63 @@ public class MouseLook : MonoBehaviour
         
         Camera.main.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+        
+        //
+        
+        if (!HandController.handController.HandControlleAble) return;
+        // Item Pickup
+        Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        RaycastHit hit;
+        // Checks raycast
+        if (Physics.Raycast(_ray, out hit, 2f, References.Instance.itemLayer)){
+            crossHair.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+            
+            ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
+            // If its an item
+            if (_itemHandler){ // Just to make sure it doesn't raise any error
+                // Show popup
+                References.Instance.itemPopup.text = "Press E to pickup";
+                if (Input.GetKeyDown(KeyCode.E)){
+                    _itemHandler.Pickup();
+                }
+            }
+            
+            IDoor door = hit.transform.gameObject.GetComponent<IDoor>();
+            if (door != null)
+            {
+                if (!door.doorOpened)
+                {
+                    if (door.itemLock)
+                    {
+                        if (door.itemContaine)
+                        {
+                            References.Instance.itemPopup.text = "Press E to unlock";
+                            if (Input.GetKeyDown(KeyCode.E)){
+                                door.OnIntract();
+                            }
+                        }
+                        else
+                        {
+                            References.Instance.itemPopup.text = "Locked";
+                        }
+                    }
+                    else
+                    {
+                        References.Instance.itemPopup.text = "Press E to open";
+                        if (Input.GetKeyDown(KeyCode.E)){
+                            door.OnIntract();
+                        }
+                    }
+                }
+                else
+                {
+                    References.Instance.itemPopup.text = "";
+                }
+            }
+        }
+        else { // Every object that has Item layer must have ItemHandler
+            References.Instance.itemPopup.text = "";
+            crossHair.transform.localScale = new Vector3(1,1,1);
+        }
     }
 }

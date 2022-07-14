@@ -13,6 +13,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/Lever/Lever.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/IDoor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2BtdR7O3gQaoUAN0OnTR65uTUdT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -64,6 +68,7 @@
       <workItem from="1657768849706" duration="5102000" />
       <workItem from="1657795151727" duration="589000" />
       <workItem from="1657795831237" duration="2570000" />
+      <workItem from="1657798755331" duration="6609000" />
     </task>
     <servers />
   </component>
