@@ -82,7 +82,7 @@ public class HandCameraSystem : MonoBehaviour, IHdCmStation
         Vector3 center = transform.position + Vector3.up * 1f;
         Gizmos.DrawWireCube(center, size);
         
-        Vector3 cameraCenter = transform.position + transform.up * 2f;
+        Vector3 cameraCenter = transform.position + Vector3.up * 2f;
         Gizmos.DrawRay(cameraCenter,  transform.forward * 5f);
     }
 }

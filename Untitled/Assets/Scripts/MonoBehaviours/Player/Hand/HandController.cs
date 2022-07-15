@@ -71,7 +71,7 @@ public class HandController : MonoBehaviour
         {
             if (!handCameraStation.sActive) return;
             if (handCameraStation.sFinish) return;
-            Vector3 position = handCameraStation.sTransform.position + handCameraStation.sTransform.up * 2f;
+            Vector3 position = handCameraStation.sTransform.position + Vector3.up * 2f;
             float distance = Vector3.Distance(transform.position, position);
             _posDistance = 1-(distance / handCameraStation.sRadius);
             handCameraZone.transform.localScale = new Vector3(_posDistance,_posDistance, _posDistance);
