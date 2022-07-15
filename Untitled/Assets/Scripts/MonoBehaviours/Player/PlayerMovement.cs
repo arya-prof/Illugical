@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isMoving && playerFootstepsCoroutine == null){
             // Start playing
-            playerFootstepsCoroutine = References.Instance.PlayFootsteps("wood", 0.2f, 0.2f, 0.2f);
+            playerFootstepsCoroutine = References.Instance.PlayFootsteps("wood 2", 0.2f, 0.2f, 0.2f);
             StartCoroutine(playerFootstepsCoroutine);
         }
         if (!isMoving && playerFootstepsCoroutine != null){

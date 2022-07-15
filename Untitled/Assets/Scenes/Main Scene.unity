@@ -4510,11 +4510,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1713205602608280675, guid: 889de1214ba179347958c4086ab2a943, type: 3}
       propertyPath: registered3D.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1713205602608280675, guid: 889de1214ba179347958c4086ab2a943, type: 3}
       propertyPath: registered3D.Array.data[0]
       value: wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713205602608280675, guid: 889de1214ba179347958c4086ab2a943, type: 3}
+      propertyPath: registered3D.Array.data[1]
+      value: wood 2
       objectReference: {fileID: 0}
     - target: {fileID: 2247690144754799120, guid: 889de1214ba179347958c4086ab2a943, type: 3}
       propertyPath: m_RootOrder
