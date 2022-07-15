@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float gravity = -9.81f;
+    private bool isMoving = false;
 
     private Vector3 _velocity;
 
@@ -41,6 +42,20 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+
+        if (move != Vector3.zero){
+            isMoving = true;
+        }
+        else{
+            isMoving = false;
+        }
+
+        if (isMoving && !References.Instance.playFootsteps){
+            StartCoroutine(References.Instance.PlayFootsteps("wood", 0.2f, 0.2f, 0.2f));
+        }
+        if (!isMoving){
+            References.Instance.StopFootsteps();
+        }
 
         _controller.Move(move * speed * Time.deltaTime);
 

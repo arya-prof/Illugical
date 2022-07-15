@@ -32,5 +32,19 @@ public class SoundManager : MonoBehaviour
 
         Destroy(newSound, soundClip.length);
     }
+    
+    public static void PlaySound3DRnadom(string folder, Vector3 position, float volume = 0.4f, float variance = 0.2f){
+        GameObject newSound = Instantiate(soundObject3D , position , Quaternion.Euler(0, 0, 0));
+        AudioSource soundSource = newSound.GetComponent<AudioSource>();
+
+        soundSource.volume = volume;
+        soundSource.pitch += Random.Range(-variance, variance);
+
+        AudioClip[] _sfxInFolder =  SoundLibrary.sfxList3DRandom[folder];
+        AudioClip _sfx = _sfxInFolder[Random.Range(0,_sfxInFolder.Length)];
+        soundSource.PlayOneShot(_sfx);
+
+        Destroy(newSound, _sfx.length);
+    }
 
 }
