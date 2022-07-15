@@ -308,6 +308,8 @@ MonoBehaviour:
   - '[CharacterName] is about 20 years old, he study archaeologist He is working
     on his education paper about archaeology Now he decide to look around into ancient
     forest in North of Iran He also brought his camera with himself. '
+  - There is a rumor that says there is an ancient forest that contains a secret
+    treasure. The prize will be given to who is worthy enough to complete the tests.
   typingSpeed: 0.05
   continueButton: {fileID: 2087410824}
 --- !u!1 &747871004
