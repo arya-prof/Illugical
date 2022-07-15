@@ -13,6 +13,8 @@ public class Tutorial : MonoBehaviour
 
     [SerializeField] private GameObject exitButton;
     private bool _closeAbleTime;
+
+    private int _currentTotIndex;
     
     private void Start()
     {
@@ -25,15 +27,17 @@ public class Tutorial : MonoBehaviour
         master.SetActive(true);
         if (totIndex < bars.Length)
         {
+            _currentTotIndex = totIndex;
             References.Instance.freezWorld = true;
             titleText.text = bars[totIndex].title;
-            float showTime = 2;
+            float showTime = .5f;
             bars[totIndex].master.SetActive(true);
             for (int i = 0; i < bars[totIndex].bars.Count; i++)
             {
                 StartCoroutine(ActivateBar(totIndex, i, showTime));
                 showTime += 3f;
             }
+            showTime -= 2f;
             StartCoroutine(ActiveCloseOption(showTime));
         }
     }
@@ -59,6 +63,11 @@ public class Tutorial : MonoBehaviour
         _closeAbleTime = false;
         
         References.Instance.freezWorld = false;
+
+        for (int i = 0; i < bars[_currentTotIndex].bars.Count; i++)
+        {
+            bars[_currentTotIndex].bars[i].SetActive(false);
+        }
     }
 
     private void Update()
