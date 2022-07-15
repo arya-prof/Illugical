@@ -7,7 +7,8 @@ public class HandController : MonoBehaviour
     public static HandController handController;
     
     private HandItem _handItem;
-    private Animator handAnim;
+    private Animator _handAnim;
+    private AudioSource _handAudioSource;
     [SerializeField] private Canvas mainCanvas;
 
     // Camera
@@ -24,7 +25,13 @@ public class HandController : MonoBehaviour
     [SerializeField] private Image handCameraZone;
     [SerializeField] private GameObject handCameraUI;
     [SerializeField] private GameObject handCameraBlackScreen;
-    
+
+    [SerializeField] private AudioClip handCameraSfxZoomIn;
+    [SerializeField] private AudioClip handCameraSfxZoomOut;
+    [SerializeField] private AudioClip handCameraSfxZoomShoot;
+    [SerializeField] private AudioClip handCameraSfxZoomSuccessShoot;
+    [SerializeField] private float handCameraSfxVolume;
+
     // CheckList
     [Header("Check List")]
     [SerializeField] private GameObject checkList;
@@ -55,7 +62,9 @@ public class HandController : MonoBehaviour
 
     private void Start()
     {
-        handAnim = GetComponent<Animator>();
+        _handAnim = GetComponent<Animator>();
+        _handAudioSource = GetComponent<AudioSource>();
+        _handAudioSource.volume = handCameraSfxVolume;
         
         handCamera.SetActive(true);
         handCameraUI.SetActive(false);
@@ -104,8 +113,11 @@ public class HandController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _delay = true;
-            StartCoroutine(Camera_TakePhoto());
-            return;
+            if (_handItem == HandItem.Camera && handCameraState)
+            {
+                StartCoroutine(Camera_TakePhoto());
+                return;
+            }
         }
 
         // RightClick
@@ -145,7 +157,7 @@ public class HandController : MonoBehaviour
 
     IEnumerator ChangeItem(GameObject hideObj, GameObject showObj)
     {
-        handAnim.SetTrigger("action");
+        _handAnim.SetTrigger("action");
         yield return new WaitForSeconds(1.0f);
         hideObj.SetActive(false);
         showObj.SetActive(true);
@@ -161,6 +173,8 @@ public class HandController : MonoBehaviour
             handCamera.SetActive(true);
             handCameraUI.SetActive(false);
             References.Instance.otherCanvas.SetActive(true);
+            
+            _handAudioSource.PlayOneShot(handCameraSfxZoomOut);
             
             yield return new WaitForSeconds(.5f);
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
@@ -185,6 +199,8 @@ public class HandController : MonoBehaviour
             handCamera.SetActive(false);
             handCameraUI.SetActive(true);
             References.Instance.otherCanvas.SetActive(false);
+            
+            _handAudioSource.PlayOneShot(handCameraSfxZoomIn);
         }
         _delay = false;
     }
@@ -203,7 +219,13 @@ public class HandController : MonoBehaviour
             
             handCameraStation.Activate();
             yield return null;
+            _handAudioSource.PlayOneShot(handCameraSfxZoomSuccessShoot);
         }
+        else
+        {
+            _handAudioSource.PlayOneShot(handCameraSfxZoomShoot);
+        }
+
         handCameraBlackScreen.SetActive(true);
         yield return new WaitForSeconds(.25f);
         if (photoTaken)
