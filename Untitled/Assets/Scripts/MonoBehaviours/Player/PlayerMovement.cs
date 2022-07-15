@@ -14,10 +14,12 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float gravity = -9.81f;
+    private Vector3 _velocity;
+    // Footsteps
     private bool isMoving = false;
     private IEnumerator playerFootstepsCoroutine;
-
-    private Vector3 _velocity;
+    private string curMaterial = null;
+    [SerializeField] private LayerMask footstepsLayermask; 
 
     private void Awake()
     {
@@ -52,14 +54,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (isMoving && playerFootstepsCoroutine == null){
             // Start playing
-            playerFootstepsCoroutine = References.Instance.PlayFootsteps("wood 2", 0.2f, 0.2f, 0.2f);
-            StartCoroutine(playerFootstepsCoroutine);
+            StartFootstepSFX();
         }
         if (!isMoving && playerFootstepsCoroutine != null){
             // Stop the sound
-            References.Instance.footstepsSource.Stop();
-            StopCoroutine(playerFootstepsCoroutine);
-            playerFootstepsCoroutine = null;
+            StopFootstepSFX();
         }
 
         _controller.Move(move * speed * Time.deltaTime);
@@ -75,5 +74,29 @@ public class PlayerMovement : MonoBehaviour
         _velocity.y += gravity * Time.deltaTime;
 
         _controller.Move(_velocity * Time.deltaTime);
+    }
+
+    private void StartFootstepSFX(){
+        playerFootstepsCoroutine = References.Instance.PlayFootsteps(curMaterial, 0.2f, 0.2f, 0f);
+        StartCoroutine(playerFootstepsCoroutine);
+    }
+    private void StopFootstepSFX(){
+        References.Instance.footstepsSource.Stop();
+        StopCoroutine(playerFootstepsCoroutine);
+        playerFootstepsCoroutine = null;
+    }
+
+    // Material change
+    private void OnControllerColliderHit(ControllerColliderHit hit) {
+        if (footstepsLayermask == (footstepsLayermask | (1 << hit.gameObject.layer))) {
+            // The first frame we are not moving so it will kinda bug and skip the first frame for safety
+            if (curMaterial != hit.gameObject.tag && isMoving){
+                curMaterial = hit.gameObject.tag;
+                StopFootstepSFX();
+                StartFootstepSFX();
+            }
+            curMaterial = hit.gameObject.tag;
+        }
+        
     }
 }
