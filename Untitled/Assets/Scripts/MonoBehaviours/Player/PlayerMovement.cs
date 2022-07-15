@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float gravity = -9.81f;
     private bool isMoving = false;
+    private IEnumerator playerFootstepsCoroutine;
 
     private Vector3 _velocity;
 
@@ -45,18 +46,20 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if (move != Vector3.zero){
-            isMoving = true;
-        }
-        else{
-            isMoving = false;
-        }
+        // If allowed to play the footsteps sfx
+        if (move != Vector3.zero) { isMoving = true; } else { isMoving = false; }
+        if (!_controller.isGrounded) { isMoving = false; }
 
-        if (isMoving && !References.Instance.playFootsteps){
-            StartCoroutine(References.Instance.PlayFootsteps("wood", 0.2f, 0.2f, 0.2f));
+        if (isMoving && playerFootstepsCoroutine == null){
+            // Start playing
+            playerFootstepsCoroutine = References.Instance.PlayFootsteps("wood", 0.2f, 0.2f, 0.2f);
+            StartCoroutine(playerFootstepsCoroutine);
         }
-        if (!isMoving){
-            References.Instance.StopFootsteps();
+        if (!isMoving && playerFootstepsCoroutine != null){
+            // Stop the sound
+            References.Instance.footstepsSource.Stop();
+            StopCoroutine(playerFootstepsCoroutine);
+            playerFootstepsCoroutine = null;
         }
 
         _controller.Move(move * speed * Time.deltaTime);

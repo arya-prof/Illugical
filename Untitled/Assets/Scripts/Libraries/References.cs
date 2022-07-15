@@ -34,14 +34,11 @@ public class References : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject itemUI;
     public GameObject checklistPanel;
-    // Local vars
-    public bool playFootsteps = false;
-    
+    // Local vars    
     public IEnumerator PlayFootsteps(string folder, float delay, float volume, float variance){
-        playFootsteps = true;
         AudioClip[] _sfxInFolder =  SoundLibrary.sfxList3DRandom[folder];
         AudioClip _sfx;
-        while (playFootsteps){
+        while (true){
             _sfx = _sfxInFolder[Random.Range(0,_sfxInFolder.Length)];
 
             footstepsSource.volume = volume;
@@ -51,11 +48,6 @@ public class References : MonoBehaviour
             yield return new WaitForSeconds(_sfx.length + delay);
         }
 
-    }
-
-    public void StopFootsteps(){
-        playFootsteps = false;
-        footstepsSource.Stop();
     }
 
     private void Awake() {
