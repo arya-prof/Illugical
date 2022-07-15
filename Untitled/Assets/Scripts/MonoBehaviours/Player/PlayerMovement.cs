@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
+        if (References.Instance.freezWorld) return;
+        
         bool isGrounded = _controller.isGrounded;
         if (isGrounded && _velocity.y < 0)
         {

@@ -24,6 +24,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ExtraFuntions/Func_Time.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/Lever/Lever.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Tutorial/Tutorial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Tutorial/TutorialBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/IDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ExtraFuntions/Func_PlayAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Puzzle/Lever/IIntract.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,7 +83,7 @@
       <workItem from="1657795831237" duration="2570000" />
       <workItem from="1657798755331" duration="12720000" />
       <workItem from="1657815819440" duration="1993000" />
-      <workItem from="1657866991191" duration="2687000" />
+      <workItem from="1657866991191" duration="10876000" />
     </task>
     <servers />
   </component>

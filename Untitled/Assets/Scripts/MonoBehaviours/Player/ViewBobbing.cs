@@ -9,6 +9,8 @@ public class ViewBobbing: MonoBehaviour {
     [SerializeField] private float midpoint = 2.0f;
   
     void Update () {
+        if (References.Instance.freezWorld) return;
+        
         if (References.Instance.playerController.isGrounded){
             float waveslice = 0.0f;
             float horizontal = Input.GetAxis("Horizontal");
