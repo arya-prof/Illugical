@@ -19,6 +19,8 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
+        if (References.Instance.freezWorld) return;
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
 

@@ -98,8 +98,9 @@ public class HandController : MonoBehaviour
     private void Update()
     {
         if(_delay) return;
+        if (References.Instance.freezWorld) return;
 
-        // LeftClick
+            // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
             _delay = true;
@@ -159,6 +160,7 @@ public class HandController : MonoBehaviour
         {
             handCamera.SetActive(true);
             handCameraUI.SetActive(false);
+            References.Instance.otherCanvas.SetActive(true);
             
             yield return new WaitForSeconds(.5f);
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
@@ -182,6 +184,7 @@ public class HandController : MonoBehaviour
             
             handCamera.SetActive(false);
             handCameraUI.SetActive(true);
+            References.Instance.otherCanvas.SetActive(false);
         }
         _delay = false;
     }
@@ -222,6 +225,7 @@ public class HandController : MonoBehaviour
             
             handCamera.SetActive(true);
             handCameraUI.SetActive(false);
+            References.Instance.otherCanvas.SetActive(true);
             
             handCameraAnim.SetTrigger("watchPhoto");
             yield return new WaitForSeconds(2.4f);
@@ -245,11 +249,13 @@ public class HandController : MonoBehaviour
         if (checkListState)
         {
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
+            References.Instance.otherCanvas.SetActive(false);
             checkListState = false;
         }
         else
         {
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.lookingSpeed;
+            References.Instance.otherCanvas.SetActive(true);
             checkListState = true;
         }
         yield return new WaitForSeconds(1.0f);
