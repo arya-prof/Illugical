@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: 153}
+  m_AnchoredPosition: {x: 0, y: 153}
   m_SizeDelta: {x: 450.721, y: 74.0692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165034711
@@ -307,9 +307,11 @@ MonoBehaviour:
   - " It\u2019s 2003 "
   - '[CharacterName] is about 20 years old, he study archaeologist He is working
     on his education paper about archaeology Now he decide to look around into ancient
-    forest in North of Iran He also brought his camera with himself. '
+    forest in North of Iran He is also enjoy taking photo '
   - There is a rumor that says there is an ancient forest that contains a secret
     treasure. The prize will be given to who is worthy enough to complete the tests.
+  - '[CharacterName] Find''s out that when he enters an ancient forest, some objects
+    are getting magical!'
   typingSpeed: 0.05
   continueButton: {fileID: 2087410824}
 --- !u!1 &747871004
@@ -712,7 +714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: -104}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 127.7923, y: 33.9538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087410826
