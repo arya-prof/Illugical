@@ -12690,6 +12690,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bad7aec69cab1b4caa4d768d54e1f2e, type: 3}
+--- !u!1 &1111238446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1111238448}
+  - component: {fileID: 1111238447}
+  m_Layer: 0
+  m_Name: WindSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1111238447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111238446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b4a54e73d2a8e4e98b68ff41ee3e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles:
+  - prefab: {fileID: 1997932853525173141, guid: 7d814e6655149e6499a3e4487a2fceee, type: 3}
+    prefabPool: []
+  - prefab: {fileID: 889232228747817423, guid: 16e922f776754d547ae10cc90df10ffd, type: 3}
+    prefabPool: []
+  areas:
+  - center: {x: -6.22, y: 8.73, z: 4.53}
+    size: {x: 28.51, y: 5.44, z: 10.33}
+  - center: {x: 49.92, y: 8.73, z: 4.53}
+    size: {x: 28.51, y: 5.44, z: 10.33}
+  - center: {x: 22.22, y: 8.73, z: 14.21}
+    size: {x: 28.51, y: 5.44, z: 29.1}
+  showAreas: 1
+--- !u!4 &1111238448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111238446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1112130203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3cf0df139bea524086f73f8ee39775e, type: 3}
