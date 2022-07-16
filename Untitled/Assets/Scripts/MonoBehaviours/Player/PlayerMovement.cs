@@ -35,8 +35,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
-        if (References.Instance.freezWorld) return;
-        
+        if (References.Instance.freezWorld){
+            // If its not already stopped
+            if (playerFootstepsCoroutine != null){
+                StopFootstepSFX();
+            }
+            return;
+        }
+
         bool isGrounded = _controller.isGrounded;
         if (isGrounded && _velocity.y < 0)
         {
