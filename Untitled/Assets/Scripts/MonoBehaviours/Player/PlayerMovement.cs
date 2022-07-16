@@ -87,7 +87,10 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(playerFootstepsCoroutine);
     }
     private void StopFootstepSFX(){
+        float _temp = References.Instance.footstepsSource.volume;
+        References.Instance.footstepsSource.volume = 0f;
         References.Instance.footstepsSource.Stop();
+        References.Instance.footstepsSource.volume = _temp;
         StopCoroutine(playerFootstepsCoroutine);
         playerFootstepsCoroutine = null;
     }
