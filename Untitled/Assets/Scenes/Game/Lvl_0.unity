@@ -184,6 +184,10 @@ PrefabInstance:
       value: _stone_3 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
       propertyPath: m_TagString
       value: CementMaterial
       objectReference: {fileID: 0}
@@ -2260,6 +2264,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
       propertyPath: m_Name
       value: _stone_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
       propertyPath: m_TagString
@@ -5422,6 +5430,10 @@ PrefabInstance:
       value: _stone_3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
       propertyPath: m_TagString
       value: CementMaterial
       objectReference: {fileID: 0}
@@ -8304,6 +8316,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a911a2cc07fe5a74985aefb14fcac8d7, type: 3}
       propertyPath: m_Name
       value: BigRock2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a911a2cc07fe5a74985aefb14fcac8d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a911a2cc07fe5a74985aefb14fcac8d7, type: 3}
       propertyPath: m_TagString
@@ -11476,6 +11492,10 @@ PrefabInstance:
       value: _stones_1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_TagString
       value: CementMaterial
       objectReference: {fileID: 0}
@@ -13333,6 +13353,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
       propertyPath: m_Name
       value: _stone_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: be66f8b1ba4517e4ba57776bcb0258c1, type: 3}
       propertyPath: m_TagString
@@ -19855,6 +19879,10 @@ PrefabInstance:
       value: BigRock1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: beffa739901bfd343949e50b637a12cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: beffa739901bfd343949e50b637a12cd, type: 3}
       propertyPath: m_TagString
       value: CementMaterial
       objectReference: {fileID: 0}
@@ -20403,6 +20431,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_Name
       value: _stones_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_TagString
