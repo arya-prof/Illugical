@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5e151abc014de548a598e175e3c5ecb, type: 3}
---- !u!1001 &1801786723
+--- !u!1001 &1453844730
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7576804553560596693, guid: 85826b62034dc2f4390272f043eeff4c, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: PauseMenuUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85826b62034dc2f4390272f043eeff4c, type: 3}
