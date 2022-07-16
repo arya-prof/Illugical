@@ -44,3 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007ff78ae142017408f16c37c6ab1d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
+  otherCanvas: {fileID: 0}
+  playerBackpack: []
+  playerBackpackUI: []
+  playerController: {fileID: 0}
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  footstepsSource: {fileID: 0}
+  itemPopup: {fileID: 0}
+  inventoryPanel: {fileID: 0}
+  itemUI: {fileID: 220685906679334108, guid: 39558c4666ae8194c8ea537b42f298ab, type: 3}
+  checklistPanel: {fileID: 0}

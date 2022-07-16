@@ -108,13 +108,12 @@ public class HandController : MonoBehaviour
     {
         if(_delay) return;
         if (References.Instance.freezWorld) return;
-
-            // LeftClick
+        // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
-            _delay = true;
             if (_handItem == HandItem.Camera && handCameraState)
             {
+                _delay = true;
                 StartCoroutine(Camera_TakePhoto());
                 return;
             }

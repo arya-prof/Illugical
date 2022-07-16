@@ -46,3 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxList2D: []
   _sfxList3D: []
+  registered2D: []
+  registered3D:
+  - WoodMaterial
+  - MetalMaterial
