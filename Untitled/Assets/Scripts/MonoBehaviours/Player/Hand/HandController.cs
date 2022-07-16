@@ -249,6 +249,11 @@ public class HandController : MonoBehaviour
             References.Instance.otherCanvas.SetActive(true);
             
             handCameraAnim.SetTrigger("watchPhoto");
+
+            handCameraStation = null;
+            _posDistance = 0;
+            _rotDistance = 0;
+            
             yield return new WaitForSeconds(2.4f);
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
             
