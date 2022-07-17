@@ -11,6 +11,7 @@ public class MouseLook : MonoBehaviour
     private float _xRotation = 0f;
 
     [SerializeField] private Image crossHair;
+    private int clearPopup;
     
     private void Start()
     {
@@ -19,6 +20,7 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
+        clearPopup = 0;
         if (References.Instance.freezWorld) return;
         
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
@@ -100,6 +102,28 @@ public class MouseLook : MonoBehaviour
             }
         }
         else { // Every object that has Item layer must have ItemHandler
+            clearPopup++;
+        }
+
+
+        if (Physics.Raycast(_ray, out hit, 2f)){
+            
+            Hoverable _hoverable = hit.transform.gameObject.GetComponent<Hoverable>();
+            // If its a Hoverable
+            if (_hoverable){
+                // Show popup
+                crossHair.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+                References.Instance.itemPopup.text = _hoverable.hoverText;
+            }
+            else {
+                clearPopup++;
+            }
+        }
+        else {
+            clearPopup++;
+        }
+
+        if (clearPopup >= 2){
             References.Instance.itemPopup.text = "";
             crossHair.transform.localScale = new Vector3(1,1,1);
         }
