@@ -8,6 +8,7 @@ TagManager:
   - MetalMaterial
   - JungleMaterial
   - CementMaterial
+  - CarpetMaterial
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Item
   - Hand
   - Hut
-  - 
+  - Furniture
   - 
   - 
   - 
