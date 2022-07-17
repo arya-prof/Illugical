@@ -5,11 +5,15 @@ using UnityEngine.Events;
 
 public class Lever : MonoBehaviour, IIntract
 {
-    [SerializeField] private UnityEvent[] events;
+    [SerializeField] private UnityEvent[] startEvent;
+    [SerializeField] private UnityEvent[] activeEvent;
+    
     [SerializeField] private int eventsIndex;
     [SerializeField] private bool repeatAble;
     [SerializeField] private Animator anim;
-    [SerializeField] private float animTime;
+    
+    [SerializeField] private float activeTime;
+    [SerializeField] private float reloadTime;
 
     private bool _delay;
     private bool _open;
@@ -36,7 +40,7 @@ public class Lever : MonoBehaviour, IIntract
     {
         if (_delay) return;
         if(!open) return;
-        if (eventsIndex >= events.Length) return;
+        if (eventsIndex >= activeEvent.Length) return;
 
         StartCoroutine(Activate());
     }
@@ -44,19 +48,22 @@ public class Lever : MonoBehaviour, IIntract
     IEnumerator Activate()
     {
         _delay = true;
-        
-        events[eventsIndex]?.Invoke();
+        //Start
+        startEvent[eventsIndex]?.Invoke();
         anim.SetTrigger("activate");
-        yield return new WaitForSeconds(animTime);
+        //Active
+        yield return new WaitForSeconds(activeTime);
+        activeEvent[eventsIndex]?.Invoke();
         eventsIndex++;
-        if (eventsIndex >= events.Length)
+        if (eventsIndex >= activeEvent.Length)
         {
             if (repeatAble)
             {
                 eventsIndex = 0;
             }
         }
-
+        //Done
+        yield return new WaitForSeconds(reloadTime);
         _delay = false;
     }
 }
