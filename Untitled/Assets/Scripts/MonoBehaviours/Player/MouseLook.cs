@@ -12,7 +12,7 @@ public class MouseLook : MonoBehaviour
 
     [SerializeField] private Image crossHair;
     private int clearPopup;
-    
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -46,10 +46,15 @@ public class MouseLook : MonoBehaviour
             // If its an item
             if (_itemHandler){ // Just to make sure it doesn't raise any error
                 // Show popup
-                References.Instance.itemPopup.text = "Press E to pickup";
+                References.Instance.itemPopupE.SetActive(true);
+                References.Instance.itemPopup.text = "to pickup";
                 if (Input.GetKeyDown(KeyCode.E)){
                     _itemHandler.Pickup();
                 }
+            }
+            else
+            {
+                References.Instance.itemPopupE.SetActive(false);
             }
             
             IDoor door = hit.transform.gameObject.GetComponent<IDoor>();
@@ -57,30 +62,23 @@ public class MouseLook : MonoBehaviour
             {
                 if (!door.doorOpened)
                 {
-                    if (door.itemLock)
+                    if (door.itemContaine)
                     {
-                        if (door.itemContaine)
-                        {
-                            References.Instance.itemPopup.text = "Press E to unlock";
-                            if (Input.GetKeyDown(KeyCode.E)){
-                                door.OnIntract();
-                            }
-                        }
-                        else
-                        {
-                            References.Instance.itemPopup.text = "Locked";
-                        }
-                    }
-                    else
-                    {
-                        References.Instance.itemPopup.text = "Press E to open";
+                        References.Instance.itemPopupE.SetActive(true);
+                        References.Instance.itemPopup.text = door.doorContaineString;
                         if (Input.GetKeyDown(KeyCode.E)){
                             door.OnIntract();
                         }
                     }
+                    else
+                    {
+                        References.Instance.itemPopupE.SetActive(false);
+                        References.Instance.itemPopup.text = door.doorLockString;
+                    }
                 }
                 else
                 {
+                    References.Instance.itemPopupE.SetActive(false);
                     References.Instance.itemPopup.text = "";
                 }
             }
@@ -90,15 +88,21 @@ public class MouseLook : MonoBehaviour
             {
                 if (intract.open)
                 {
-                    References.Instance.itemPopup.text = "Press E to use";
+                    References.Instance.itemPopupE.SetActive(true);
+                    References.Instance.itemPopup.text = "to use";
                     if (Input.GetKeyDown(KeyCode.E)){
                         intract.OnActivate();
                     }
                 }
                 else
                 {
+                    References.Instance.itemPopupE.SetActive(false);
                     References.Instance.itemPopup.text = "Unable to use";
                 }
+            }
+            else
+            {
+                References.Instance.itemPopupE.SetActive(false);
             }
         }
         else { // Every object that has Item layer must have ItemHandler
