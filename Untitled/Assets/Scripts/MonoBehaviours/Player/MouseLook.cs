@@ -45,19 +45,20 @@ public class MouseLook : MonoBehaviour
             
             ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
             // If its an item
-            if (_itemHandler){ // Just to make sure it doesn't raise any error
+            if (_itemHandler != null){ // Just to make sure it doesn't raise any error
                 // Show popup
                 References.Instance.itemPopupE.SetActive(true);
                 References.Instance.itemPopup.text = "to pickup";
                 if (Input.GetKeyDown(KeyCode.E)){
                     _itemHandler.Pickup();
                 }
+                return;
             }
             else
             {
-                References.Instance.itemPopupE.SetActive(false);
+                References.Instance.itemPopupE.SetActive(false);   
             }
-            
+
             IDoor door = hit.transform.gameObject.GetComponent<IDoor>();
             if (door != null)
             {
@@ -82,6 +83,11 @@ public class MouseLook : MonoBehaviour
                     References.Instance.itemPopupE.SetActive(false);
                     References.Instance.itemPopup.text = "";
                 }
+                return;
+            }
+            else
+            {
+                References.Instance.itemPopupE.SetActive(false);   
             }
             
             IIntract intract = hit.transform.gameObject.GetComponent<IIntract>();
@@ -100,6 +106,7 @@ public class MouseLook : MonoBehaviour
                     References.Instance.itemPopupE.SetActive(false);
                     References.Instance.itemPopup.text = "Unable to use";
                 }
+                return;
             }
             else
             {
@@ -107,6 +114,7 @@ public class MouseLook : MonoBehaviour
             }
         }
         else { // Every object that has Item layer must have ItemHandler
+            References.Instance.itemPopupE.SetActive(false);
             clearPopup++;
         }
 
