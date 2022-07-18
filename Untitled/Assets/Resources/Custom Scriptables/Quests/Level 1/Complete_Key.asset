@@ -15,4 +15,4 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls: []
-  description: 
+  description: Find the key parts in the map and complete them

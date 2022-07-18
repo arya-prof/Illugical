@@ -15,4 +15,6 @@ MonoBehaviour:
   triggerEvent:
     m_PersistentCalls:
       m_Calls: []
-  description: 
+  description: 'Place the battery in the generator
+
+'

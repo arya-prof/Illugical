@@ -12,4 +12,10 @@ public class Quest : ScriptableObject
     [HideInInspector] public UnityEvent triggerEvent;
     [SerializeField, TextArea] public string description = "";
 
+
+    // For camera editor system
+    public void CompleteQuest(){
+        triggerEvent.Invoke();
+    }
+
 }

@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class ItemHandler : MonoBehaviour
 {
     [SerializeField] private Item item;
+    [Header("Can be ignored")]
+    public Quest _quest; 
 
     public void Pickup(){
         References.Instance.playerBackpack.Add(item);
         Destroy(this.gameObject);
+        if (_quest){
+            _quest.CompleteQuest();
+        }
         AddToUI();
     }
 

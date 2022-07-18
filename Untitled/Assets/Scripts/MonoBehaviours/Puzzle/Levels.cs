@@ -8,12 +8,16 @@ public class Levels : MonoBehaviour
     public static List<Level> AllLevels = new List<Level>();
     public Transform levelsObject;
 
-    private void Start() {
-
+    private void Awake() {
         for (int i = 0; i < levelsObject.childCount; i++){
             Level _lvl = levelsObject.GetChild(i).GetComponent<Level>();
             _lvl.index = i;
             AllLevels.Add(_lvl);
+            if (i == LevelFinish.completedLevel){
+                _lvl.CompleteLevel();
+                LevelFinish.completedLevel = -1;
+            }
+
             if (0 < i){
                 if (PlayerPrefs.GetInt("Level" + (i-1)) == 1){
                     _lvl.UnlockLevel();
