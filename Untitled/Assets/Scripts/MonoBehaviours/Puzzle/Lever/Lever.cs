@@ -22,7 +22,7 @@ public class Lever : MonoBehaviour, IIntract
     {
         get
         {
-            if (!_delay || _open)
+            if (!_delay && _open)
             {
                 return true;
             }
