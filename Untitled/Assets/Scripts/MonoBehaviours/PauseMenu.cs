@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,12 +39,25 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
-        Debug.Log("LOADMENU");
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 0f;
+        QuestionUI.Instance.ShowQuestion("Are you sure want back to camp ?", () =>
+        {
+            Time.timeScale = 1f;
+            Debug.Log("LOAD SCENE");
+        }, () => {
+            Time.timeScale = 1f;
+        });
     }
     public void QuitGame()
     {
-        Debug.Log("QUIT!");
-        Application.Quit();
+        pauseMenuUI.SetActive(false);
+        QuestionUI.Instance.ShowQuestion("Are you sure want to quit the game ?", () =>
+        {
+            Debug.Log("QUIT!");
+            Application.Quit();
+        }, () => {
+            Time.timeScale = 1f;
+        });
     }
 }
