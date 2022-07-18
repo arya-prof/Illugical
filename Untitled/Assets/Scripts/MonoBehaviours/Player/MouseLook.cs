@@ -160,7 +160,7 @@ public class MouseLook : MonoBehaviour
         if (Physics.Raycast(_ray, out hit, 2f)){
             // If its credits
             if (hit.transform.CompareTag("Credits")){
-                // Do stuff
+                References.Instance.CreditsUI.SetActive(!References.Instance.CreditsUI.activeSelf);
             }
         }
     }

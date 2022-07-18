@@ -36,6 +36,7 @@ public class References : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject itemUI;
     public GameObject checklistPanel;
+    public GameObject CreditsUI;
     // Local vars    
     public IEnumerator PlayFootsteps(string folder, float delay, float volume, float variance){
         AudioClip[] _sfxInFolder =  SoundLibrary.sfxList3DRandom[folder];
