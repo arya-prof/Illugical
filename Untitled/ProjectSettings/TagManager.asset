@@ -9,6 +9,7 @@ TagManager:
   - JungleMaterial
   - CementMaterial
   - CarpetMaterial
+  - Credits
   layers:
   - Default
   - TransparentFX
