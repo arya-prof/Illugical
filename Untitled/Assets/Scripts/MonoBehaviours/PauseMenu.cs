@@ -37,18 +37,18 @@ public class PauseMenu : MonoBehaviour
         GameIsPause = true;
     }
 
-    /*public void LoadMenu()
+    public void CampMenu()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 0f;
         QuestionUI.Instance.ShowQuestion("Are you sure want back to camp ?", () =>
         {
             Time.timeScale = 1f;
-            Debug.Log("LOAD SCENE");
+            Debug.Log("BACK TO CAMP LOADED");
         }, () => {
             Time.timeScale = 1f;
         });
-    }*/
+    }
     public void QuitGame()
     {
         pauseMenuUI.SetActive(false);
