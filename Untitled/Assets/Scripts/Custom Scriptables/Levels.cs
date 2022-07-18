@@ -5,20 +5,26 @@ using UnityEngine.UI;
 
 public class Levels : MonoBehaviour
 {
-    public Level[] AllLevels;
+    public static List<Level> AllLevels = new List<Level>();
 
     private void Awake() {
-        if (AllLevels.Length != transform.childCount){
-            Debug.Log("Levels doesnt match!");
-            return;
+        for (int i = 0; i < transform.childCount; i++){
+            Level _lvl = transform.GetChild(i).GetComponent<Level>();
+            _lvl.index = i;
+            AllLevels.Add(_lvl);
+            if (0 < i){
+                if (PlayerPrefs.GetInt("Level" + (i-1)) == 1){
+                    _lvl.UnlockLevel();
+                }
+            }
+
+            if (!PlayerPrefs.HasKey("Level" + i))
+                PlayerPrefs.SetInt("Level" + i, 0);
+            else
+                if (PlayerPrefs.GetInt("Level" + i) == 1)
+                    _lvl.CompleteLevel();
         }
-        // Setup levels
-        for (int i = 0; i < AllLevels.Length; i++){
-            // Image _levelImage = transform.GetChild(i).GetComponentInChildren(typeof(Image)) as Image;
-            // _levelImage.sprite = AllLevels[i].mat;
-            transform.GetChild(i).GetComponent<Renderer>().material = AllLevels[i].textureMaterial;
-            Hoverable.CreateComponent(transform.GetChild(i).gameObject, AllLevels[i].hoverText);
-        }
+        PlayerPrefs.Save();
     }
     
 }
