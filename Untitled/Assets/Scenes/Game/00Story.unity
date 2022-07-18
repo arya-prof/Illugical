@@ -435,12 +435,12 @@ MonoBehaviour:
   - " It\u2019s 2003 "
   - '[CharacterName] is about 20 years old, he study archaeologist He is working
     on his education paper about archaeology Now he decide to look around into ancient
-    forest in North of Iran He is also enjoy taking photo '
+    forest in North of Iran He also enjoys taking photos '
   - There is a rumor that says there is an ancient forest that contains a secret
     treasure. The prize will be given to who is worthy enough to complete the tests.
-  - '[CharacterName] Find''s out that when he enters an ancient forest, some objects
-    are getting magical!'
-  typingSpeed: 0.05
+  - "[CharacterName] Find\u2019s out that when he enters the ancient forest, some
+    objects are getting magical!"
+  typingSpeed: 0.03
   continueButton: {fileID: 2087410824}
 --- !u!1 &747871004
 GameObject:
