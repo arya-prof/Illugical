@@ -25,6 +25,7 @@ public class Tutorial : MonoBehaviour
     public void OnActivate(int totIndex)
     {
         master.SetActive(true);
+        References.Instance.mainCanvas.SetActive(false);
         if (totIndex < bars.Length)
         {
             _currentTotIndex = totIndex;
@@ -58,6 +59,7 @@ public class Tutorial : MonoBehaviour
     public void OnClose()
     {
         master.SetActive(false);
+        References.Instance.mainCanvas.SetActive(true);
         
         exitButton.SetActive(false);
         _closeAbleTime = false;

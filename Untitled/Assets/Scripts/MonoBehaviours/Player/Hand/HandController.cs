@@ -6,7 +6,7 @@ public class HandController : MonoBehaviour
 {
     public static HandController handController;
     
-    private HandItem _handItem;
+    [SerializeField] private HandItem _handItem;
     private Animator _handAnim;
     private AudioSource _handAudioSource;
     [SerializeField] private Canvas mainCanvas;
