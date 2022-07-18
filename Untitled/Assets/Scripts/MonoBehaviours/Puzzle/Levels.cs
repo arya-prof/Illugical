@@ -8,7 +8,7 @@ public class Levels : MonoBehaviour
     public static List<Level> AllLevels = new List<Level>();
     public Transform levelsObject;
 
-    private void Awake() {
+    private void Start() {
         for (int i = 0; i < levelsObject.childCount; i++){
             Level _lvl = levelsObject.GetChild(i).GetComponent<Level>();
             _lvl.index = i;

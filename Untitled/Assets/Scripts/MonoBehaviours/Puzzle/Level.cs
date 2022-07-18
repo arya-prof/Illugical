@@ -9,7 +9,7 @@ public class Level : MonoBehaviour{
     [TextArea] public string hoverText;
     [HideInInspector] public int index = 0;
 
-    private void Start() {
+    private void Awake() {
         if (unlocked) { UnlockLevel() ;}
 
         transform.GetChild(0).GetComponent<Renderer>().materials[1].mainTexture = levelTexture;
