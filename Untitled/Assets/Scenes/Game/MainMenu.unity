@@ -3472,6 +3472,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8214148700944629049, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
+      propertyPath: _handItem
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214148700944629049, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 1691600121}
