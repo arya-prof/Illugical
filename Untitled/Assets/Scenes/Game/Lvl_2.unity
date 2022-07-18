@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402188, g: 0.4931649, b: 0.57223135, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -256,6 +256,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_Name
       value: _stones_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
@@ -2031,9 +2039,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2062,6 +2094,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -2193,6 +2233,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_Name
       value: _stones_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
@@ -2867,6 +2915,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
       propertyPath: m_Name
       value: _stone_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b386b315a287334fb3873d27a5aecdc, type: 3}
@@ -3798,6 +3854,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_Name
       value: _stones_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
@@ -5656,9 +5720,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5683,6 +5771,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -6011,9 +6107,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6038,6 +6158,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -6200,6 +6328,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
       propertyPath: m_Name
       value: _stones_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
@@ -7390,9 +7526,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7417,6 +7577,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -8475,6 +8643,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: _stones_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
+      propertyPath: m_TagString
+      value: CementMaterial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d76f95560d4236c4390b9007a23cbd23, type: 3}
 --- !u!4 &1451541739 stripped
@@ -8669,9 +8845,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8700,6 +8900,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -9523,9 +9731,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_Name
       value: Platform (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9550,6 +9782,14 @@ PrefabInstance:
     - target: {fileID: 4306643203051859313, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -10434,7 +10674,7 @@ PrefabInstance:
     - target: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
       propertyPath: checklistPanel
       value: 
-      objectReference: {fileID: 1828653021}
+      objectReference: {fileID: 0}
     - target: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
       propertyPath: inventoryPanel
       value: 
@@ -10618,11 +10858,6 @@ AudioSource:
 --- !u!4 &1828653020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8214148701940178529, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
-  m_PrefabInstance: {fileID: 1828653017}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1828653021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8214148700603385307, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
   m_PrefabInstance: {fileID: 1828653017}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1830076768
@@ -10898,6 +11133,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_TagString
+      value: JungleMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_TagString
+      value: JungleMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: -6093592463355912122, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10934,6 +11185,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 69a985891cd2ec941aa2e202b25f181b, type: 2}
+    - target: {fileID: -516098083770646512, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_TagString
+      value: JungleMaterial
+      objectReference: {fileID: 0}
     - target: {fileID: 882129737928793925, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10954,6 +11213,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4726dfff83e8d5f41bc400c4d5d91608, type: 2}
+    - target: {fileID: 5148817236446094103, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_TagString
+      value: WoodMaterial
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
+      propertyPath: m_TagString
+      value: JungleMaterial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f9f018b8a23854d99509abab84a41e, type: 3}
 --- !u!1001 &1886860078
