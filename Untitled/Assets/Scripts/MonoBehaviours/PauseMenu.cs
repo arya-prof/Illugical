@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPause = true;
     }
 
-    public void LoadMenu()
+    /*public void LoadMenu()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 0f;
@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
         }, () => {
             Time.timeScale = 1f;
         });
-    }
+    }*/
     public void QuitGame()
     {
         pauseMenuUI.SetActive(false);
