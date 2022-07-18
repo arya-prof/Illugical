@@ -65,12 +65,25 @@ public class HandController : MonoBehaviour
         _handAnim = GetComponent<Animator>();
         _handAudioSource = GetComponent<AudioSource>();
         _handAudioSource.volume = handCameraSfxVolume;
-        
-        handCamera.SetActive(true);
+
         handCameraUI.SetActive(false);
         handCameraBlackScreen.SetActive(false);
         
-        checkList.SetActive(false);
+        switch (_handItem)
+        {
+            case HandItem.Null:
+                handCamera.SetActive(false);
+                checkList.SetActive(false);
+                return;
+            case HandItem.Camera:
+                handCamera.SetActive(true);
+                checkList.SetActive(false);
+                return;
+            case HandItem.CheckList:
+                handCamera.SetActive(false);
+                checkList.SetActive(true);
+                return;
+        }
     }
 
     private void FixedUpdate()
