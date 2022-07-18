@@ -3,32 +3,11 @@ using UnityEngine.Events;
 
 public class Door : MonoBehaviour, IDoor
 {
-    private bool _lockOpened;
     private bool _doorOpened;
     
     [SerializeField] private UnityEvent openEvent;
     [SerializeField] private Item item;
-    public bool itemLock
-    {
-        get
-        {
-            if (item == null)
-            {
-                return false;
-            }
-            else
-            {
-                if (_lockOpened)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-        }
-    }
+
     public bool itemContaine
     {
         get
@@ -51,9 +30,21 @@ public class Door : MonoBehaviour, IDoor
         }
     }
 
+    [SerializeField] private string _doorLockString;
+    public string doorLockString
+    {
+        get { return _doorLockString; }
+    }
+
+    [SerializeField] private string _doorContaineString;
+    public string doorContaineString
+    {
+        get { return _doorContaineString; }
+    }
+
     public void OnIntract()
     {
-        if (itemLock)
+        if (!_doorOpened)
         {
             if (itemContaine)
             {
@@ -66,13 +57,9 @@ public class Door : MonoBehaviour, IDoor
                         References.Instance.playerBackpackUI.RemoveAt(i);
                     }
                 }
-                _lockOpened = true;
+                _doorOpened = true;
+                openEvent?.Invoke();
             }
-        }
-        else
-        {
-            _doorOpened = true;
-            openEvent?.Invoke();
         }
     }
 }
