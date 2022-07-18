@@ -10,6 +10,7 @@ public class References : MonoBehaviour
 
     // Player
     public Transform cameraTransform;
+    public GameObject mainCanvas;
     public GameObject otherCanvas;
     public List<Item> playerBackpack = new List<Item>();
     public List<GameObject> playerBackpackUI = new List<GameObject>();
