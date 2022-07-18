@@ -1,5 +1,6 @@
 public enum HandItem
 {
     Camera,
-    CheckList
+    CheckList,
+    Null
 }
