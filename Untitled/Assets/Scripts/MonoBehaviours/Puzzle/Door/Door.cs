@@ -1,12 +1,13 @@
 using Codice.CM.Common;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour, IDoor
 {
     private bool _lockOpened;
     private bool _doorOpened;
     
-    [SerializeField] private Animator anim;
+    [SerializeField] private UnityEvent openEvent;
     [SerializeField] private Item item;
     public bool itemLock
     {
@@ -72,7 +73,7 @@ public class Door : MonoBehaviour, IDoor
         else
         {
             _doorOpened = true;
-            Debug.Log("opening");
+            openEvent?.Invoke();
         }
     }
 }

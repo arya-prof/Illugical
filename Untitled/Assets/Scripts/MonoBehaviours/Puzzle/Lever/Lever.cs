@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class Lever : MonoBehaviour, IIntract
     [SerializeField] private UnityEvent[] startEvent;
     [SerializeField] private UnityEvent[] activeEvent;
     
-    [SerializeField] private int eventsIndex;
+    private int eventsIndex;
     [SerializeField] private bool repeatAble;
     [SerializeField] private Animator anim;
     
@@ -35,6 +36,12 @@ public class Lever : MonoBehaviour, IIntract
             _open = value;
         }
     }
+    [SerializeField] private bool openInStart;
+
+    private void Start()
+    {
+        open = openInStart;
+    }
 
     public void OnActivate()
     {
@@ -50,7 +57,7 @@ public class Lever : MonoBehaviour, IIntract
         _delay = true;
         //Start
         startEvent[eventsIndex]?.Invoke();
-        anim.SetTrigger("activate");
+        anim.SetTrigger("active");
         //Active
         yield return new WaitForSeconds(activeTime);
         activeEvent[eventsIndex]?.Invoke();
