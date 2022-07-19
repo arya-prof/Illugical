@@ -289,13 +289,13 @@ public class HandController : MonoBehaviour
         if (checkListState)
         {
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.walkingSpeed;
-            References.Instance.otherCanvas.SetActive(false);
+            References.Instance.otherCanvas.SetActive(true);
             checkListState = false;
         }
         else
         {
             PlayerMovement.playerMovement.speed = PlayerMovement.playerMovement.lookingSpeed;
-            References.Instance.otherCanvas.SetActive(true);
+            References.Instance.otherCanvas.SetActive(false);
             checkListState = true;
         }
         yield return new WaitForSeconds(1.0f);
