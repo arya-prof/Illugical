@@ -14,9 +14,6 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private Image crossHair;
     private int clearPopup;
 
-    public bool mainMenu;
-    private bool lookingAtCredit;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -26,12 +23,6 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
-        if (mainMenu && lookingAtCredit)
-        {
-            References.Instance.itemPopup.text = "to close";
-            if(Input.GetKeyDown(KeyCode.E))
-                CloseCredit();
-        }
         
         clearPopup = 0;
         if (References.Instance.freezWorld) return;
@@ -172,48 +163,5 @@ public class MouseLook : MonoBehaviour
             References.Instance.itemPopup.text = "";
             crossHair.transform.localScale = new Vector3(1,1,1);
         }
-
-
-        if (Input.GetKeyDown(KeyCode.E)){
-            CheckLevelClick();
-            CheckCreditsClick();
-        }
-    }
-
-    private void CheckLevelClick(){
-        Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
-        if (Physics.Raycast(_ray, out hit, 2f)){
-            // If its a level
-            Level _lvl = hit.transform.GetComponent<Level>();
-            if (_lvl){
-                if (_lvl.unlocked){
-                    SceneManager.LoadScene(_lvl.sceneIndex);
-                }
-            }
-        }
-    }
-
-    private void CheckCreditsClick(){
-        Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        RaycastHit hit;
-        if (Physics.Raycast(_ray, out hit, 2f)){
-            // If its credits
-            if (hit.transform.CompareTag("Credits")){
-                References.Instance.CreditsUI.SetActive(!References.Instance.CreditsUI.activeSelf);
-                if (References.Instance.CreditsUI.activeInHierarchy)
-                {
-                    References.Instance.freezWorld = true;
-                    lookingAtCredit = true;
-                }
-            }
-        }
-    }
-
-    private void CloseCredit()
-    {
-        References.Instance.CreditsUI.SetActive(false);
-        References.Instance.freezWorld = false;
-        lookingAtCredit = false;
     }
 }
