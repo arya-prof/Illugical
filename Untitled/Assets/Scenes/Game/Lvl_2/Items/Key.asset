@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Key
   m_EditorClassIdentifier: 
   itemName: Key
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: e3ea8e78ec034784eb20cc7035638ab7, type: 3}
   description: 
   originalPrefab: {fileID: 0}

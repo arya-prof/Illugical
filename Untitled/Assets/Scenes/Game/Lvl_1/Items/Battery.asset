@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Battery
   m_EditorClassIdentifier: 
   itemName: Battery
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: ab53f98502538114f88a5ebc93b4d32b, type: 3}
   description: 
   originalPrefab: {fileID: 0}
