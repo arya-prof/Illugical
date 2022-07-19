@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class References : MonoBehaviour
@@ -58,6 +59,8 @@ public class References : MonoBehaviour
     // Fade
     public Image fadeImage;
     public bool fadeValue;
+
+    public UnityEvent endGameEvent;
     
     private void Awake() {
         Instance = this;

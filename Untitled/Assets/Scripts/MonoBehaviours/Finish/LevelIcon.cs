@@ -44,7 +44,7 @@ public class LevelIcon : MonoBehaviour, ILevel
             _doneBefore = value;
             if (_doneBefore)
             {
-                imageRenderer.material.SetColor("_Color", playedColor);
+                imageRenderer.material.SetColor("_BaseColor", playedColor);
             }
             else
             {
