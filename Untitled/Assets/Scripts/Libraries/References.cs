@@ -98,7 +98,7 @@ public class References : MonoBehaviour
                 fadeImage.color = new Color(0, 0, 0, i);
                 yield return null;
             }
-            // EndMission
+            endGameEvent?.Invoke();
         }
     }
 }

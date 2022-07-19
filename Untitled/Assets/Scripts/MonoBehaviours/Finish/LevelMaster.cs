@@ -19,7 +19,7 @@ public class LevelMaster : MonoBehaviour
             }
             else
             {
-                int lastLevel = i - 0;
+                int lastLevel = i - 1;
                 string levelName = "lvl" + lastLevel;
                 int value = PlayerPrefs.GetInt(levelName);
                 if (value == 1)
