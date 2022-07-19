@@ -14,6 +14,9 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private Image crossHair;
     private int clearPopup;
 
+    public bool mainMenu;
+    private bool lookingAtCredit;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -23,6 +26,13 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
+        if (mainMenu && lookingAtCredit)
+        {
+            References.Instance.itemPopup.text = "to close";
+            if(Input.GetKeyDown(KeyCode.E))
+                CloseCredit();
+        }
+        
         clearPopup = 0;
         if (References.Instance.freezWorld) return;
         
@@ -146,9 +156,11 @@ public class MouseLook : MonoBehaviour
             if (_hoverable){
                 // Show popup
                 crossHair.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
+                References.Instance.itemPopupE.SetActive(true);
                 References.Instance.itemPopup.text = _hoverable.hoverText;
             }
             else {
+                References.Instance.itemPopupE.SetActive(false);
                 clearPopup++;
             }
         }
@@ -189,7 +201,19 @@ public class MouseLook : MonoBehaviour
             // If its credits
             if (hit.transform.CompareTag("Credits")){
                 References.Instance.CreditsUI.SetActive(!References.Instance.CreditsUI.activeSelf);
+                if (References.Instance.CreditsUI.activeInHierarchy)
+                {
+                    References.Instance.freezWorld = true;
+                    lookingAtCredit = true;
+                }
             }
         }
+    }
+
+    private void CloseCredit()
+    {
+        References.Instance.CreditsUI.SetActive(false);
+        References.Instance.freezWorld = false;
+        lookingAtCredit = false;
     }
 }

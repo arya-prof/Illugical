@@ -4135,6 +4135,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701601744228, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
+      propertyPath: mainMenu
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214148701601744228, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 2020659056}
@@ -8628,7 +8632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21a10da02a80bc4f97e562180d858e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Press E to View/Unview Credits
+  hoverText: Credits
 --- !u!1001 &917105625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12483,8 +12487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 16.9032, y: -7}
-  m_SizeDelta: {x: 636.3391, y: -97.7256}
+  m_AnchoredPosition: {x: 16.9032, y: 31.7314}
+  m_SizeDelta: {x: 636.3391, y: -20.262802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393453061
 MonoBehaviour:
