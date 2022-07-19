@@ -124,6 +124,7 @@ public class HandController : MonoBehaviour
         // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
+            print(1);
             if (_handItem == HandItem.Camera && handCameraState)
             {
                 _delay = true;
@@ -150,16 +151,17 @@ public class HandController : MonoBehaviour
         // PressTab
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            _delay = true;
             switch (_handItem)
             {
                 case HandItem.Camera:
                     if (handCameraState) return;
+                    _delay = true;
                     _handItem = HandItem.CheckList;
                     StartCoroutine(ChangeItem(handCamera,checkList));
                     return;
                 case HandItem.CheckList:
                     if (checkListState) return;
+                    _delay = true;
                     _handItem = HandItem.Camera;
                     StartCoroutine(ChangeItem(checkList,handCamera));
                     return;
