@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -46,8 +46,7 @@ public class Dialog : MonoBehaviour
         }
         else
         {
-            textDisplay.text = "";
-            continueButton.SetActive(false);
+            SceneManager.LoadScene(1);
         }
     }
 }
