@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aa9687ffd461ba4785e8a8372b70ef0, type: 3}
-  m_Name: QuestHole
+  m_Name: Hole
   m_EditorClassIdentifier: 
   triggerEvent:
     m_PersistentCalls:
       m_Calls: []
-  description: Complate Hole
+  description: Complate the hole
