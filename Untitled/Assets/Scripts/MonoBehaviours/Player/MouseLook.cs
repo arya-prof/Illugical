@@ -17,6 +17,8 @@ public class MouseLook : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        References.Instance.itemPopup.text = "";
+        crossHair.transform.localScale = new Vector3(0f,0f,0f);
     }
 
     private void Update()

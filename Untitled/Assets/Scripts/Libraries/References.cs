@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class References : MonoBehaviour
 {
@@ -53,8 +55,47 @@ public class References : MonoBehaviour
 
     }
 
+    // Fade
+    public Image fadeImage;
+    public bool fadeValue;
+    
     private void Awake() {
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        StartCoroutine(Fade());
+    }
+
+    public void EndGame()
+    {
+        StartCoroutine(Fade());
+    }
+
+    IEnumerator Fade()
+    {
+        if (!fadeValue)
+        {
+            freezWorld = true;
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                fadeImage.color = new Color(0, 0, 0, i);
+                yield return null;
+            } 
+            freezWorld = false;
+            fadeValue = true;
+        }
+        else
+        {
+            freezWorld = true;
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                fadeImage.color = new Color(0, 0, 0, i);
+                yield return null;
+            }
+            // EndMission
+        }
     }
 }
