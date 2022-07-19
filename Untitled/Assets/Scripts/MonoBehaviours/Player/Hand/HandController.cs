@@ -124,7 +124,6 @@ public class HandController : MonoBehaviour
         // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
-            print(1);
             if (_handItem == HandItem.Camera && handCameraState)
             {
                 _delay = true;
