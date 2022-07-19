@@ -10241,7 +10241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d92f9f00cbe112840905c761c44c5097, type: 2}
-  _quest: {fileID: 0}
+  _quest: {fileID: 11400000, guid: e4dbdeb5a289c014b85dfd0dbc424c5f, type: 2}
 --- !u!65 &1575197715
 BoxCollider:
   m_ObjectHideFlags: 0
