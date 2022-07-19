@@ -5,7 +5,7 @@ A brief description of what this project does and who it's for
 
 ## Demo
 
-Insert gif or link to demo
+https://i.ibb.co/djYvWG2/Mainmenu.png
 
 
 ## Documentation
@@ -24,4 +24,3 @@ Insert gif or link to demo
 - [@arya-prof](https://www.github.com/arya-prof)
 - [@TheDarkBatman2](https://www.github.com/TheDarkBatman2)
 - [@PotionPersia](https://www.github.com/PotionPersia)
-- [@samanehkarimian](https://www.github.com/samanehkarimian)
