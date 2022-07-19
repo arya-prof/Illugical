@@ -47,6 +47,7 @@ public class PauseMenu : MonoBehaviour
             SceneManager.LoadScene(1);
         }, () => {
             Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
         });
     }
     public void QuitGame()
