@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
         QuestionUI.Instance.ShowQuestion("Are you sure want back to camp ?", () =>
         {
             Time.timeScale = 1f;
-            Debug.Log("BACK TO CAMP LOADED");
+            SceneManager.LoadScene(1);
         }, () => {
             Time.timeScale = 1f;
         });
