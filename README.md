@@ -5,7 +5,7 @@ A brief description of what this project does and who it's for
 
 ## Demo
 
-https://i.ibb.co/djYvWG2/Mainmenu.png
+![screenshot 1](https://i.ibb.co/djYvWG2/Mainmenu.png "")
 
 
 ## Documentation
