@@ -885,7 +885,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &214255871
 PrefabInstance:
@@ -2587,6 +2587,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+    - target: {fileID: 2012887041848508218, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
+      propertyPath: _quest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8378f49b1e83c9344807ac09e6987797, type: 2}
     - target: {fileID: 3433882928533768931, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -2607,6 +2611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3844903411473482605, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
+      propertyPath: _quest
+      value: 
+      objectReference: {fileID: 11400000, guid: a4259655408f75443a8494a65d31c6dd, type: 2}
     - target: {fileID: 4259097012435982284, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2651,6 +2659,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896829652313279311, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
+      propertyPath: _quest
+      value: 
+      objectReference: {fileID: 11400000, guid: e4dbdeb5a289c014b85dfd0dbc424c5f, type: 2}
+    - target: {fileID: 5709457298583725045, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
+      propertyPath: m_text
+      value: Capture a picture to make hole
+      objectReference: {fileID: 0}
     - target: {fileID: 5709457298583725045, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -2683,6 +2699,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+    - target: {fileID: 8895943402425505324, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
+      propertyPath: _quest
+      value: 
+      objectReference: {fileID: 11400000, guid: 708c2352ec9c1164a841a740c40c39a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bd1cf7cce7dda745865d14fd449f081, type: 3}
 --- !u!1 &408871518
@@ -6992,7 +7012,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1000814648
 PrefabInstance:
@@ -8232,6 +8252,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 8378f49b1e83c9344807ac09e6987797, type: 2}
+        m_TargetAssemblyTypeName: Quest, Scripts
+        m_MethodName: CompleteQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11827,15 +11859,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.22
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.69
+      value: -37.91
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalRotation.w
