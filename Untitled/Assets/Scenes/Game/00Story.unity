@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 153}
+  m_AnchoredPosition: {x: 0, y: 82}
   m_SizeDelta: {x: 450.721, y: 74.0692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165034711
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -433,13 +433,13 @@ MonoBehaviour:
   textDisplay: {fileID: 165034711}
   sentencs:
   - " It\u2019s 2003 "
-  - '[CharacterName] is about 20 years old, he study archaeologist He is working
-    on his education paper about archaeology Now he decide to look around into ancient
-    forest in North of Iran He also enjoys taking photos '
+  - 'Jahan is about 20 years old, he study archaeologist He is working on his education
+    paper about archaeology Now he decide to look around into ancient forest in North
+    of Iran He also enjoys taking photos '
   - There is a rumor that says there is an ancient forest that contains a secret
     treasure. The prize will be given to who is worthy enough to complete the tests.
-  - "[CharacterName] Find\u2019s out that when he enters the ancient forest, some
-    objects are getting magical!"
+  - "Jahan Find\u2019s out that when he enters the ancient forest, some objects are
+    getting magical!"
   typingSpeed: 0.03
   continueButton: {fileID: 2087410824}
 --- !u!1 &747871004
@@ -842,7 +842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
+  m_AnchoredPosition: {x: 0, y: -115}
   m_SizeDelta: {x: 127.7923, y: 33.9538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087410826
@@ -869,7 +869,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.7661505, g: 0.19063722, b: 0.7924528, a: 1}
     m_PressedColor: {r: 0.8773585, g: 0.3186632, b: 0.7895242, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7647059, g: 0.19215687, b: 0.7921569, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
