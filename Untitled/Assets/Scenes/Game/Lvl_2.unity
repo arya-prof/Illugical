@@ -4501,7 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527cfda06db5775448ca3477335b1229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impact: {fileID: 8300000, guid: fe060765b8db8e04b9c3ea898e586017, type: 3}
+  impact: {fileID: 8300000, guid: 04b5faef47e12d742adc1058f032eba4, type: 3}
 --- !u!4 &581272856
 Transform:
   m_ObjectHideFlags: 0
@@ -13043,15 +13043,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.5
+      value: -38.86
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalRotation.w

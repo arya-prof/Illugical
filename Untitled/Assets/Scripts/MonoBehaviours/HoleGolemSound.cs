@@ -15,6 +15,6 @@ public class HoleGolemSound : MonoBehaviour
     public void HgolemSound()
     {
             audioSource.PlayOneShot(impact, 1f);
-            CameraShaker.Instance.ShakeOnce(4f, 4f, 0.1f, 1f);
+            CameraShaker.Instance.ShakeOnce(4f, 4f, 2f, 15f);
     }
 }
