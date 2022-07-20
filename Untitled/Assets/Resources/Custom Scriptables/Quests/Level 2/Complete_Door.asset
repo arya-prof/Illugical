@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aa9687ffd461ba4785e8a8372b70ef0, type: 3}
-  m_Name: Pickup_Key
+  m_Name: Complete_Door
   m_EditorClassIdentifier: 
   triggerEvent:
     m_PersistentCalls:
       m_Calls: []
-  description: Find the key
+  description: Find door pieces throughout the map and complete the door
