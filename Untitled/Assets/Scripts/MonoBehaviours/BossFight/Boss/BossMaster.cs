@@ -307,6 +307,7 @@ public class BossMaster : MonoBehaviour
         if(damageDelay) return;
         if (other.CompareTag("CannonBall"))
         {
+            other.gameObject.SetActive(false);
             damageDelay = true;
             health--;
         }

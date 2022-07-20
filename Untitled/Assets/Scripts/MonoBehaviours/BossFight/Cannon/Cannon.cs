@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]private GameObject cannonBall;
+    [SerializeField] private Transform cannonShotPos;
+    private GameObject activeCannonBall;
+    private GameObject getCannonBall()
     {
-        
+        if (activeCannonBall != null)
+        {
+            GameObject oldBall = activeCannonBall;
+            oldBall.transform.position = cannonShotPos.position;
+            oldBall.SetActive(true);
+            return oldBall;
+        }
+        else
+        {
+            GameObject newBall = Instantiate(cannonBall,cannonShotPos.position, Quaternion.identity);
+            return newBall;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Fire()
     {
-        
+        GameObject ball = getCannonBall();
     }
 }

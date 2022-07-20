@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2810344651231716250}
   - component: {fileID: 6629002068995499354}
   - component: {fileID: 2641203094478147077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,9 +107,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1994641596337311846}
   - component: {fileID: 3388132123211504839}
+  - component: {fileID: -693419049212412671}
   - component: {fileID: 401586141917858717}
   - component: {fileID: 8295553595580351830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile_Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +145,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8811410a4e406af4386cab3822ace244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-693419049212412671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385411959723888551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798b58dbad017b74eb3aa5b645c73cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: d657c4e19671d3549a17cf1462aa32f5, type: 2}
+  _quest: {fileID: 0}
 --- !u!135 &401586141917858717
 SphereCollider:
   m_ObjectHideFlags: 0

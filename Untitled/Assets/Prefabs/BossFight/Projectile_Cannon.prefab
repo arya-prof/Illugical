@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6894411791466059232}
   - component: {fileID: 53375056088621109}
+  - component: {fileID: 7168420331815690169}
   - component: {fileID: 8592559540854671736}
   - component: {fileID: -2919816921282992467}
   m_Layer: 0
@@ -47,6 +48,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1122d462e63f8419b57cd24615dc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7168420331815690169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000667319106400310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690e2f8f53d19804db67c7aa3be9af1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonBall: {fileID: 0}
+  cannonShotPos: {fileID: 0}
 --- !u!135 &8592559540854671736
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonProjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float speed;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, BossMaster.boss.transform.position, speed * Time.deltaTime);
     }
 }
