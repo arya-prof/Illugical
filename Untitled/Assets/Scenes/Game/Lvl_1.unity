@@ -8598,7 +8598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.14
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8606,7 +8606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.52
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8648,6 +8648,10 @@ PrefabInstance:
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 1825705348}
+    - target: {fileID: 8214148701904134204, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8214148701940178541, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 1791
