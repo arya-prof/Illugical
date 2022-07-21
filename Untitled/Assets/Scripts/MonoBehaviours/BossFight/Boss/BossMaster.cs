@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -54,6 +55,8 @@ public class BossMaster : MonoBehaviour
             damageDelay = false;
         }
     }
+    [SerializeField] private UnityEvent deathEvent;
+    [SerializeField] private Image fadeImage;
 
     [Header("Projectile")] 
     [SerializeField] private GameObject projectileCannonObj;
@@ -310,7 +313,18 @@ public class BossMaster : MonoBehaviour
     private IEnumerator Death()
     {
         projectileTra.gameObject.SetActive(false);
-        yield return null;
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            fadeImage.color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+        deathEvent?.Invoke();
+        bossMesh.SetActive(false);
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            fadeImage.color = new Color(0, 0, 0, i);
+            yield return null;
+        } 
     }
 
     public void RemoveProjectile(GameObject projectile)
