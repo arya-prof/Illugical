@@ -30,6 +30,7 @@ public class BossMaster : MonoBehaviour
 
     [SerializeField] private GameObject natureSound;
     [SerializeField] private GameObject battleSound;
+    [SerializeField] private GameObject pHealthCanvas;
     public int health
     {
         get
@@ -315,8 +316,12 @@ public class BossMaster : MonoBehaviour
 
     private IEnumerator Death()
     {
+        bossCanvas.SetActive(false);
+        pHealthCanvas.SetActive(false);
+
         battleSound.GetComponent<AudioSource>().Stop();
         natureSound.GetComponent<AudioSource>().Play();
+
         projectileTra.gameObject.SetActive(false);
         for (float i = 0; i <= 1; i += Time.deltaTime)
         {

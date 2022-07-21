@@ -10859,6 +10859,7 @@ MonoBehaviour:
   maxHealth: 6
   natureSound: {fileID: 575586549}
   battleSound: {fileID: 1935177672}
+  pHealthCanvas: {fileID: 1427271001}
   deathEvent:
     m_PersistentCalls:
       m_Calls:
