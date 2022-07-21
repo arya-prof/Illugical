@@ -11,6 +11,8 @@ public class HandController : MonoBehaviour
     private AudioSource _handAudioSource;
     [SerializeField] private Canvas mainCanvas;
 
+    private bool _hideHand;
+
     // Camera
     [Header("Hand Camera")]
     [SerializeField] private GameObject handCamera;
@@ -119,8 +121,10 @@ public class HandController : MonoBehaviour
 
     private void Update()
     {
+        if(_hideHand) return;
         if(_delay) return;
         if (References.Instance.freezWorld) return;
+        
         // LeftClick
         if (Input.GetMouseButtonDown(0))
         {
@@ -166,6 +170,40 @@ public class HandController : MonoBehaviour
                     return;
             }
         }
+    }
+
+    public void HideHand()
+    {
+        StartCoroutine(Hide());
+    }
+    IEnumerator Hide()
+    {
+        _hideHand = true;
+        if (handCameraState)
+        {
+            StartCoroutine(Camera_LookAt());
+            yield return new WaitForSeconds(1.5f);
+        }
+        if (checkListState)
+        {
+            StartCoroutine(CheckList_LookAt());
+            yield return new WaitForSeconds(1.5f);
+        }
+        handCamera.SetActive(false);
+        checkList.SetActive(false);
+    }
+
+    public void ShowHand()
+    {
+        if (_handItem == HandItem.Camera)
+        {
+            handCamera.SetActive(true);
+        }
+        if (_handItem == HandItem.CheckList)
+        {
+            checkList.SetActive(true);
+        }
+        _hideHand = false;
     }
 
     IEnumerator ChangeItem(GameObject hideObj, GameObject showObj)
