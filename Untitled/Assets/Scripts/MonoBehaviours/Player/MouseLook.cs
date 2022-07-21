@@ -137,28 +137,6 @@ public class MouseLook : MonoBehaviour
             {
                 References.Instance.itemPopupE.SetActive(false);
             }
-
-            ILevel iLevel = hit.transform.gameObject.GetComponent<ILevel>();
-            if (iLevel != null)
-            {
-                if (iLevel.levelLock)
-                {
-                    References.Instance.itemPopupE.SetActive(false);
-                    References.Instance.itemPopup.text = "Locked";
-                }
-                else
-                {
-                    References.Instance.itemPopupE.SetActive(true);
-                    References.Instance.itemPopup.text = "to Play";
-                    if (Input.GetKeyDown(KeyCode.E)){
-                        iLevel.StartLevel();
-                    }
-                }
-            }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);
-            }
         }
         else { // Every object that has Item layer must have ItemHandler
             References.Instance.itemPopupE.SetActive(false);
