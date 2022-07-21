@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1892991718377940106}
   m_Layer: 0
   m_Name: Projectile_Rock
-  m_TagString: Untagged
+  m_TagString: BossProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_23
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: 886c173379d97fe45b397e7e738463ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 886c173379d97fe45b397e7e738463ca, type: 3}
 --- !u!1 &527001941475458342 stripped
 GameObject:
