@@ -77,6 +77,7 @@ public class ProjectileAmmo : MonoBehaviour, IProjectile
             {
                 _activate = true;
                 _onMove = false;
+                _attack.PlaySound();
                 BossMaster.boss.RemoveProjectile(gameObject);
             }
         }

@@ -16,6 +16,7 @@ public class BossMaster : MonoBehaviour
     private int _attackNum;
     private int _shootCounter;
 
+    [SerializeField] private GameObject bossMesh;
     [SerializeField] private Animator bossAnim;
     private BossAttackDetail _currentPhase;
     private BossAttackDetail _activePhase;
@@ -177,6 +178,8 @@ public class BossMaster : MonoBehaviour
         healthSlider.value = health;
 
         bossCanvas.SetActive(false);
+        
+        bossMesh.SetActive(false);
     }
 
     public void Summon()
@@ -195,7 +198,9 @@ public class BossMaster : MonoBehaviour
             yield return null;
         }
         bossHpSlider.localScale = new Vector3(1,1,1);
-        //bossAnim.SetBool("_Summon",true);
+        bossMesh.SetActive(true);
+        bossAnim.SetTrigger("Summon");
+        EZCameraShake.CameraShaker.Instance.ShakeOnce(3f, 3f, 0.1f, 15f);
         yield return new WaitForSeconds(summonTime);
         _currentPhase = phaseZ;
         _action = true;
@@ -310,6 +315,7 @@ public class BossMaster : MonoBehaviour
     public void RemoveProjectile(GameObject projectile)
     {
         _shootCounter++;
+        EZCameraShake.CameraShaker.Instance.ShakeOnce(3f, 3f, 0.1f, 2f);
         if (_shootCounter == _activePhase.totalProjectile)
         {
             projectileActive.Clear();
@@ -325,6 +331,7 @@ public class BossMaster : MonoBehaviour
         {
             damageDelay = true;
             other.gameObject.SetActive(false);
+            EZCameraShake.CameraShaker.Instance.ShakeOnce(3f, 3f, 0.1f, 2f);
             health--;
         }
     }

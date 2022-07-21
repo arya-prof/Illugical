@@ -80,6 +80,7 @@ public class Projectile : MonoBehaviour, IProjectile
                 _activate = true;
                 _onMove = false;
                 MeshObj.SetActive(false);
+                _attack.PlaySound();
                 BossMaster.boss.RemoveProjectile(gameObject);
             }
         }
