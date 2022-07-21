@@ -57,10 +57,7 @@ public class MouseLook : MonoBehaviour
                 }
                 return;
             }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);   
-            }
+
 
             IDoor door = hit.transform.gameObject.GetComponent<IDoor>();
             if (door != null)
@@ -88,11 +85,7 @@ public class MouseLook : MonoBehaviour
                 }
                 return;
             }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);   
-            }
-            
+
             IIntract intract = hit.transform.gameObject.GetComponent<IIntract>();
             if (intract != null)
             {
@@ -110,10 +103,6 @@ public class MouseLook : MonoBehaviour
                     References.Instance.itemPopup.text = "Unable to use";
                 }
                 return;
-            }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);
             }
 
             Cannon canon = hit.transform.gameObject.GetComponent<Cannon>();
@@ -133,39 +122,14 @@ public class MouseLook : MonoBehaviour
                     References.Instance.itemPopup.text = "Unable to use";
                 }
             }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);
-            }
-
-            ILevel iLevel = hit.transform.gameObject.GetComponent<ILevel>();
-            if (iLevel != null)
-            {
-                if (iLevel.levelLock)
-                {
-                    References.Instance.itemPopupE.SetActive(false);
-                    References.Instance.itemPopup.text = "Locked";
-                }
-                else
-                {
-                    References.Instance.itemPopupE.SetActive(true);
-                    References.Instance.itemPopup.text = "to Play";
-                    if (Input.GetKeyDown(KeyCode.E)){
-                        iLevel.StartLevel();
-                    }
-                }
-            }
-            else
-            {
-                References.Instance.itemPopupE.SetActive(false);
-            }
         }
         else { // Every object that has Item layer must have ItemHandler
+            References.Instance.itemPopup.text = "";
             References.Instance.itemPopupE.SetActive(false);
             clearPopup++;
         }
-
-
+        
+        /*
         if (Physics.Raycast(_ray, out hit, 2f)){
             
             Hoverable _hoverable = hit.transform.gameObject.GetComponent<Hoverable>();
@@ -184,6 +148,7 @@ public class MouseLook : MonoBehaviour
         else {
             clearPopup++;
         }
+        */
 
         if (clearPopup >= 2){
             References.Instance.itemPopup.text = "";

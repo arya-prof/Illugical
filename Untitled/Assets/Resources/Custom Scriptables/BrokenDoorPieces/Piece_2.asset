@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Piece_2
   m_EditorClassIdentifier: 
   itemName: DoorPIece
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: e8dcd759f4260ca4c9c028de20eabbac, type: 3}
   description: asdasd
   originalPrefab: {fileID: 0}

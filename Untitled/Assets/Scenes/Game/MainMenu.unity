@@ -4150,7 +4150,8 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8214148701601744228, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
 --- !u!143 &425303651 stripped
 CharacterController:
@@ -5878,6 +5879,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a5541e1e8c94e54eaf98bdbc0877e2f, type: 3}
   m_PrefabInstance: {fileID: 581883452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &596816301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8214148701315729609, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
+  m_PrefabInstance: {fileID: 425303650}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &602839596
 PrefabInstance:
@@ -12333,6 +12339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e24d5009f46c443b0805228db045f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBody: {fileID: 596816301}
+  mouseSens: 100
+  crossHair: {fileID: 2020659056}
 --- !u!1001 &1359601449
 PrefabInstance:
   m_ObjectHideFlags: 0
