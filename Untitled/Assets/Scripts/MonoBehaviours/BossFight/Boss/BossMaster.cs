@@ -125,7 +125,7 @@ public class BossMaster : MonoBehaviour
                 return oldObj;
             }
         }
-        GameObject newObj = Instantiate(attackZoneObj);
+        GameObject newObj = Instantiate(attackZoneObj, projectileTra);
         newObj.SetActive(false);
         attackZonePool.Add(newObj);
         return newObj;
@@ -309,6 +309,7 @@ public class BossMaster : MonoBehaviour
 
     private IEnumerator Death()
     {
+        projectileTra.gameObject.SetActive(false);
         yield return null;
     }
 
