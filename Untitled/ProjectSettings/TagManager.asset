@@ -10,6 +10,7 @@ TagManager:
   - CementMaterial
   - CarpetMaterial
   - Credits
+  - CannonBall
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Hut
   - Furniture
   - Photos
-  - CannonBall
+  - 
   - 
   - 
   - 

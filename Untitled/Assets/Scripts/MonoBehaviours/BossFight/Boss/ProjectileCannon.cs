@@ -6,7 +6,6 @@ public class ProjectileCannon : MonoBehaviour, IProjectile
 {
     private bool _onMove;
     private bool _activate;
-    private bool _done;
     private float _time;
     
     private float _speed;
@@ -37,7 +36,6 @@ public class ProjectileCannon : MonoBehaviour, IProjectile
 
     private void FixedUpdate()
     {
-        if(_done) return;
         if (_activate)
         {
             if (_time < 1)
@@ -47,8 +45,10 @@ public class ProjectileCannon : MonoBehaviour, IProjectile
             }
             else
             {
-                _done = true;
+                _activate = false;
                 _attack.gameObject.SetActive(false);
+                collider.radius = 1;
+                collider.isTrigger = false;
                 transform.rotation = Quaternion.Euler(0,0,0);
             }
             return;

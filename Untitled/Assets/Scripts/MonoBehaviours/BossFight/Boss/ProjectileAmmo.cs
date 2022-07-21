@@ -58,7 +58,10 @@ public class ProjectileAmmo : MonoBehaviour, IProjectile
             }
             else
             {
+                _activate = false;
                 _time = 0;
+                collider.radius = 1f;
+                collider.isTrigger = false;
                 _attack.gameObject.SetActive(false);
             }
             return;

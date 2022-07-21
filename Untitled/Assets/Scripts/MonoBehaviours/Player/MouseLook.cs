@@ -115,7 +115,29 @@ public class MouseLook : MonoBehaviour
             {
                 References.Instance.itemPopupE.SetActive(false);
             }
-            
+
+            Cannon canon = hit.transform.gameObject.GetComponent<Cannon>();
+            if (canon != null)
+            {
+                if (canon.fire)
+                {
+                    References.Instance.itemPopupE.SetActive(true);
+                    References.Instance.itemPopup.text = "to fire";
+                    if (Input.GetKeyDown(KeyCode.E)){
+                        canon.Fire();
+                    }
+                }
+                else
+                {
+                    References.Instance.itemPopupE.SetActive(false);
+                    References.Instance.itemPopup.text = "Unable to use";
+                }
+            }
+            else
+            {
+                References.Instance.itemPopupE.SetActive(false);
+            }
+
             ILevel iLevel = hit.transform.gameObject.GetComponent<ILevel>();
             if (iLevel != null)
             {

@@ -111,7 +111,7 @@ public class BossMaster : MonoBehaviour
     [SerializeField] private Transform projectileTra;
     [SerializeField] private float minXpos;
     [SerializeField] private float maxYPos;
-    
+
     [Header("AttackZone")]
     [SerializeField] private GameObject attackZoneObj;
     private GameObject getAttackZonePool()
@@ -131,7 +131,23 @@ public class BossMaster : MonoBehaviour
     }
     private List<GameObject> attackZonePool = new List<GameObject>();
     private List<GameObject> attackZoneActive = new List<GameObject>();
-
+    public LayerMask groundLayer;
+    private Vector3 attackSpot(Transform mother)
+    {
+        RaycastHit hit;
+        Vector3 direction = mother.TransformDirection(Vector3.down * 5f);
+        Ray ray = new Ray(mother.position, direction);
+        if (Physics.Raycast(ray, out hit, groundLayer))
+        {
+            Debug.DrawRay(mother.position, direction, Color.yellow);
+            return hit.transform.position;
+        }
+        else
+        {
+            return mother.position;
+        }
+    }
+    
     [Header("Summon")] 
     [SerializeField] private GameObject bossCanvas;
     [SerializeField] private Transform bossHpSlider;
@@ -157,8 +173,9 @@ public class BossMaster : MonoBehaviour
 
     private void Start()
     {
-        healthSlider.maxValue = maxHealth;
-        healthSlider.value = maxHealth;
+        health = maxHealth;
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
 
         bossCanvas.SetActive(false);
     }
@@ -251,7 +268,7 @@ public class BossMaster : MonoBehaviour
         {
             yield return new WaitForSeconds(fireDelay);
             
-            Vector3 playerPos = player.position;
+            Vector3 playerPos = attackSpot(player);
             
             GameObject projectile = projectileActive[i];
             IProjectile bossProjectile = projectile.GetComponent<IProjectile>();
@@ -276,7 +293,7 @@ public class BossMaster : MonoBehaviour
         IProjectile projectile = cannonObj.GetComponent<IProjectile>();
         
         GameObject attackZone = getAttackZonePool();
-        attackZone.transform.position = cannonPlace.position;
+        attackZone.transform.position = attackSpot(cannonPlace);
         BossAttack bossAttack = attackZone.GetComponent<BossAttack>();
 
         projectile.StartAttack(_currentPhase.projectileSpeed, _currentPhase.projectileRadius ,cannonPlace.position, bossAttack);
@@ -307,9 +324,15 @@ public class BossMaster : MonoBehaviour
         if(damageDelay) return;
         if (other.CompareTag("CannonBall"))
         {
-            other.gameObject.SetActive(false);
             damageDelay = true;
+            other.gameObject.SetActive(false);
             health--;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 direction = player.TransformDirection(Vector3.down * 5f);
+        Gizmos.DrawRay(player.position, direction);
     }
 }
