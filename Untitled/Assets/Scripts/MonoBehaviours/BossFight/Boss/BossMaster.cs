@@ -135,12 +135,11 @@ public class BossMaster : MonoBehaviour
     private Vector3 attackSpot(Transform mother)
     {
         RaycastHit hit;
-        Vector3 direction = mother.TransformDirection(Vector3.down * 5f);
+        Vector3 direction = Vector3.down;
         Ray ray = new Ray(mother.position, direction);
         if (Physics.Raycast(ray, out hit, groundLayer))
         {
-            Debug.DrawRay(mother.position, direction, Color.yellow);
-            return hit.transform.position;
+            return hit.point;
         }
         else
         {
@@ -328,11 +327,5 @@ public class BossMaster : MonoBehaviour
             other.gameObject.SetActive(false);
             health--;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Vector3 direction = player.TransformDirection(Vector3.down * 5f);
-        Gizmos.DrawRay(player.position, direction);
     }
 }
