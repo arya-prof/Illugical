@@ -155,6 +155,10 @@ public class MouseLook : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                References.Instance.itemPopupE.SetActive(false);
+            }
         }
         else { // Every object that has Item layer must have ItemHandler
             References.Instance.itemPopupE.SetActive(false);

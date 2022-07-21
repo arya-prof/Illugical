@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4e34b36b63bdaea49859802cca4ec7e2, type: 2}
+      objectReference: {fileID: 2100000, guid: 0233b7bbf8378c648936f3fa0b6d13ac, type: 2}
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -588,7 +588,7 @@ MonoBehaviour:
   lockObject: {fileID: 1280842647}
   imageRenderer: {fileID: 22574447}
   playedColor: {r: 1, g: 1, b: 1, a: 1}
-  notPlayedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  notPlayedColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
 --- !u!65 &22574451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4361,7 +4361,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: df9f0835e4448384ca600ce0613a802e, type: 2}
+      objectReference: {fileID: 2100000, guid: 04ce1491fc0fbfa4ebaba8554c76bf7a, type: 2}
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -4414,7 +4414,7 @@ MonoBehaviour:
   lockObject: {fileID: 832568771}
   imageRenderer: {fileID: 434971502}
   playedColor: {r: 1, g: 1, b: 1, a: 1}
-  notPlayedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  notPlayedColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
 --- !u!65 &434971506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11978,7 +11978,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5ead16dfcbc200a4c8339ed30e9791f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 0ca30c9326d3b304aa4d3e4ec65315c6, type: 2}
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -12031,7 +12031,7 @@ MonoBehaviour:
   lockObject: {fileID: 1012838714}
   imageRenderer: {fileID: 1296027323}
   playedColor: {r: 1, g: 1, b: 1, a: 1}
-  notPlayedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  notPlayedColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
 --- !u!65 &1296027327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12177,7 +12177,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3efe6537748afc74b9b53388c4629231, type: 2}
+      objectReference: {fileID: 2100000, guid: 410dbdc7e758adf44bc00a59e481a8e7, type: 2}
     - target: {fileID: -4683669308469848369, guid: 12fedfadfe70c584e93703101b7a0804, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -12230,7 +12230,7 @@ MonoBehaviour:
   lockObject: {fileID: 900757700}
   imageRenderer: {fileID: 1301677451}
   playedColor: {r: 1, g: 1, b: 1, a: 1}
-  notPlayedColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  notPlayedColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
 --- !u!65 &1301677455
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class LevelIcon : MonoBehaviour, ILevel
             }
             else
             {
-                imageRenderer.material.SetColor("_Color", notPlayedColor);
+                imageRenderer.material.SetColor("_BaseColor", notPlayedColor);
             }
         }
     }
