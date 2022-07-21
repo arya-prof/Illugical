@@ -11619,6 +11619,10 @@ PrefabInstance:
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 1037540461}
+    - target: {fileID: 8214148701904134204, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1f224d3f0a35364da0623efac39825c, type: 3}
 --- !u!4 &1540489795 stripped
