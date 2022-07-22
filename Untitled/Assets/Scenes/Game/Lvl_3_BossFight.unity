@@ -12028,7 +12028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3d11cee380fb548ba0b33dcef6c415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotParticle: {fileID: 5492100799437632847, guid: f8a198820578e9d4caebb6fc3e6b5a8a, type: 3}
+  shotParticle: {fileID: 7560426245012955700, guid: d69e57678ce72fa44a2f7e6ec8f4ec6e, type: 3}
   rockExplosionParticle: {fileID: 3693447022193048941, guid: f00296ec6f2434d478361d0017a87097, type: 3}
   player: {fileID: 1014017716}
   bossMesh: {fileID: 2073262514}
