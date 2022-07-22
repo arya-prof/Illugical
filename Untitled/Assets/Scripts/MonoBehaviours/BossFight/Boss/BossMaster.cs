@@ -8,6 +8,9 @@ using Random = UnityEngine.Random;
 
 public class BossMaster : MonoBehaviour
 {
+
+    [SerializeField] private AudioClip golemRoarSfx;
+    [SerializeField] private AudioClip golemHitSfx;
     [SerializeField] private GameObject shotParticle;
 
     [SerializeField] private GameObject rockExplosionParticle;
@@ -357,6 +360,8 @@ public class BossMaster : MonoBehaviour
             // Shot particle system
             GameObject _temp = Instantiate(shotParticle, other.transform.position, Quaternion.identity);
             Destroy(_temp, 1f);
+
+            SoundManager.PlaySound2D(golemHitSfx, 0.4f, 0f);
 
             damageDelay = true;
             other.gameObject.SetActive(false);
