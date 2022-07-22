@@ -6483,12 +6483,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: c1c1ec5780529464b944549d5dc3c58f, type: 2}
-        m_TargetAssemblyTypeName: References, Scripts
-        m_MethodName: 
+        m_TargetAssemblyTypeName: Quest, Scripts
+        m_MethodName: CompleteQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16459,6 +16459,10 @@ PrefabInstance:
     - target: {fileID: 4259097012435982284, guid: 157bc5cd66679a64f8100c0f80f46021, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028131617312169890, guid: 157bc5cd66679a64f8100c0f80f46021, type: 3}
+      propertyPath: m_text
+      value: TO THE MOON
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157bc5cd66679a64f8100c0f80f46021, type: 3}
