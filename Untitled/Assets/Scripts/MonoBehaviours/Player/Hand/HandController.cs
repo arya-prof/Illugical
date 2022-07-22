@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -281,13 +282,18 @@ public class HandController : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         if (photoTaken)
         {
-            string filePath = Application.dataPath + "takenPhoto.png";
-            if (System.IO.File.Exists(filePath))
+            bool newImage = false;
+            while (!newImage)
             {
-                var bytes = System.IO.File.ReadAllBytes(filePath);
-                var tex = new Texture2D(1, 1);
-                tex.LoadImage(bytes);
-                handCameraPhoto.material.mainTexture = tex;
+                string filePath = Application.dataPath + "takenPhoto.png";
+                if (System.IO.File.Exists(filePath))
+                {
+                    var bytes = System.IO.File.ReadAllBytes(filePath);
+                    var tex = new Texture2D(1, 1);
+                    tex.LoadImage(bytes);
+                    handCameraPhoto.material.mainTexture = tex;
+                    newImage = true;
+                }
             }
         }
         yield return new WaitForSeconds(.25f);
@@ -317,7 +323,14 @@ public class HandController : MonoBehaviour
         }
 
         _delay = false;
+        
+        yield return new WaitForSeconds(1.0f);
+        
+        string deleteFilePath = Application.dataPath + "takenPhoto.png";
+        File.Delete(deleteFilePath);
     }
+    
+
     #endregion
 
     #region CheckList
