@@ -829,9 +829,9 @@ MonoBehaviour:
   enterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 106797591}
-        m_TargetAssemblyTypeName: LevelEnding, Scripts
-        m_MethodName: Finish
+      - m_Target: {fileID: 1763792748}
+        m_TargetAssemblyTypeName: References, Scripts
+        m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18837,6 +18837,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3036790141310494889, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
   m_PrefabInstance: {fileID: 1763792746}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1763792748 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4050893009280831183, guid: 413020a978d6a7a4db6b457a534d6005, type: 3}
+  m_PrefabInstance: {fileID: 1763792746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007ff78ae142017408f16c37c6ab1d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1770784421
 GameObject:
   m_ObjectHideFlags: 0
