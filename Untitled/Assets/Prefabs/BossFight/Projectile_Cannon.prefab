@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690e2f8f53d19804db67c7aa3be9af1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotParticle: {fileID: 5492100799437632847, guid: 69f51f0b236a49d46b2bd75c652881d7, type: 3}
   cannonItem: {fileID: 11400000, guid: d657c4e19671d3549a17cf1462aa32f5, type: 2}
   cannonBall: {fileID: 7385411959723888551, guid: 94fcbe2dafab48841949323c357fc8d3, type: 3}
   cannonShotPos: {fileID: 2830076469250602940}

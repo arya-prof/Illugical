@@ -8,6 +8,9 @@ using Random = UnityEngine.Random;
 
 public class BossMaster : MonoBehaviour
 {
+    [SerializeField] private GameObject shotParticle;
+
+    [SerializeField] private GameObject rockExplosionParticle;
     public static BossMaster boss;
     [SerializeField] private Transform player;
 
@@ -264,6 +267,7 @@ public class BossMaster : MonoBehaviour
             yield return new WaitForSeconds(eachReload);
             GameObject projectile = getProjectile(reward, i, rewardIndex);
             projectileActive.Add(projectile);
+            // projectile.GetComponent<Rigidbody>().angularVelocity = Random.rotation.eulerAngles; // random rotation
             projectile.transform.position = new Vector3(minXpos+(distance * (i+1)),0,0) + projectileTra.position;
         }
         StartCoroutine(Attack(reward));
@@ -329,6 +333,12 @@ public class BossMaster : MonoBehaviour
 
     public void RemoveProjectile(GameObject projectile)
     {
+        // Rock particle system
+        if (projectile.name.Contains("Projectile_Rock")){
+            GameObject _temp = Instantiate(rockExplosionParticle, projectile.transform.position, Quaternion.identity);
+            Destroy(_temp, 1f);
+        }
+
         _shootCounter++;
         EZCameraShake.CameraShaker.Instance.ShakeOnce(3f, 3f, 0.1f, 2f);
         if (_shootCounter == _activePhase.totalProjectile)
@@ -344,6 +354,10 @@ public class BossMaster : MonoBehaviour
         if(damageDelay) return;
         if (other.CompareTag("CannonBall"))
         {
+            // Shot particle system
+            GameObject _temp = Instantiate(shotParticle, other.transform.position, Quaternion.identity);
+            Destroy(_temp, 1f);
+
             damageDelay = true;
             other.gameObject.SetActive(false);
             EZCameraShake.CameraShaker.Instance.ShakeOnce(3f, 3f, 0.1f, 2f);
