@@ -2333,7 +2333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use                    once to switch to your CheckList to find your current
+  m_text: Use                    once to switch to your checklist to find your current
     objectives.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
@@ -4819,7 +4819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Some times you have to look in diffrent way.
+  m_text: 'Sometimes you have to look in a diffrent way to find solutions.
 
 '
   m_isRightToLeft: 0
@@ -13689,7 +13689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sometimes for solving puzzles you have to Climb.
+  m_text: Sometimes in order to solve puzzles you have to climb.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
   m_sharedMaterial: {fileID: -4778515174181219147, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
@@ -16628,7 +16628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: By           you can zoom in and zoom out to your CheckList.
+  m_text: By           you can zoom in and zoom out to your checklist.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
   m_sharedMaterial: {fileID: -4778515174181219147, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
@@ -17174,7 +17174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You have a CheckList to solve your puzzles.
+  m_text: You have a checklist to view your current objectives.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
   m_sharedMaterial: {fileID: -4778515174181219147, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
@@ -23280,7 +23280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: By pressing                     you can jump and Climb obsticles.
+  m_text: By pressing                     you can jump and climb obsticles.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
   m_sharedMaterial: {fileID: -4778515174181219147, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
@@ -25871,7 +25871,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: For taking your best photoes you have to fill quarter of the middle shape.
+  m_text: If you want to take a correct photo you have to fill quarter of the middle
+    shape.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
   m_sharedMaterial: {fileID: -4778515174181219147, guid: 7bcf3bc158dd672449645e2fbd5d8fcd, type: 2}
