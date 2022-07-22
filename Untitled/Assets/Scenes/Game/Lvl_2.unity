@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 9782568}
   - component: {fileID: 9782567}
   - component: {fileID: 9782572}
+  - component: {fileID: 9782573}
   m_Layer: 7
   m_Name: Piece_4
   m_TagString: Untagged
@@ -215,7 +216,7 @@ MeshCollider:
   m_GameObject: {fileID: 9782566}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -315,6 +316,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &9782573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9782566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0074301157, y: 0.012721725, z: 0.0077751633}
+  m_Center: {x: -0.003603795, y: -0.0036391357, z: 0.016693711}
 --- !u!4 &13342078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71208d6a1fa31184082b75d66f4098e1, type: 3}
@@ -11609,6 +11623,7 @@ GameObject:
   - component: {fileID: 1622801991}
   - component: {fileID: 1622801990}
   - component: {fileID: 1622801995}
+  - component: {fileID: 1622801996}
   m_Layer: 7
   m_Name: Piece_2
   m_TagString: Untagged
@@ -11625,7 +11640,7 @@ MeshCollider:
   m_GameObject: {fileID: 1622801989}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -11725,6 +11740,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1622801996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622801989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009196854, y: 0.012721725, z: 0.010358698}
+  m_Center: {x: -0.015290308, y: -0.0036391357, z: 0.0154019445}
 --- !u!1001 &1627829585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13339,6 +13367,7 @@ GameObject:
   - component: {fileID: 1816339654}
   - component: {fileID: 1816339653}
   - component: {fileID: 1816339658}
+  - component: {fileID: 1816339659}
   m_Layer: 7
   m_Name: Piece_3
   m_TagString: Untagged
@@ -13355,7 +13384,7 @@ MeshCollider:
   m_GameObject: {fileID: 1816339652}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -13455,6 +13484,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1816339659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816339652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013390106, y: 0.012721725, z: 0.006914273}
+  m_Center: {x: -0.00658379, y: -0.0036391357, z: 0.017124157}
 --- !u!1001 &1830076768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15594,6 +15636,7 @@ GameObject:
   - component: {fileID: 2131758218}
   - component: {fileID: 2131758222}
   - component: {fileID: 2131758223}
+  - component: {fileID: 2131758224}
   m_Layer: 7
   m_Name: Piece_1
   m_TagString: Untagged
@@ -15689,7 +15732,7 @@ MeshCollider:
   m_GameObject: {fileID: 2131758217}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -15710,6 +15753,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2131758224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131758217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.012721725, z: 0.0049523534}
+  m_Center: {x: -0.0098887365, y: -0.0036391357, z: 0.018105116}
 --- !u!1 &2146938301
 GameObject:
   m_ObjectHideFlags: 0
