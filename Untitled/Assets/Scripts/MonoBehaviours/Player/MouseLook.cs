@@ -127,6 +127,7 @@ public class MouseLook : MonoBehaviour
         else { // Every object that has Item layer must have ItemHandler
             References.Instance.itemPopup.text = "";
             References.Instance.itemPopupE.SetActive(false);
+            crossHair.transform.localScale = new Vector3(1,1,1);
             clearPopup++;
         }
         
