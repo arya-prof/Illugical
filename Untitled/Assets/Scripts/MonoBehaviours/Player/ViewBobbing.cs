@@ -10,6 +10,9 @@ public class ViewBobbing: MonoBehaviour {
   
     void Update () {
         if (References.Instance.freezWorld) return;
+
+        if (!References.Instance.playerController.isGrounded)
+        return;
         
         if (References.Instance.playerController.isGrounded){
             float waveslice = 0.0f;
