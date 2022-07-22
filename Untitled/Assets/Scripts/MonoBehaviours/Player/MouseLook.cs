@@ -44,7 +44,7 @@ public class MouseLook : MonoBehaviour
         Ray _ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;
         // Checks raycast
-        if (Physics.Raycast(_ray, out hit, 2f, References.Instance.itemLayer)){
+        if (Physics.Raycast(_ray, out hit, 3f, References.Instance.itemLayer)){
             crossHair.transform.localScale = new Vector3(1.5f,1.5f,1.5f);
             
             ItemHandler _itemHandler = hit.transform.gameObject.GetComponent<ItemHandler>();
@@ -127,6 +127,7 @@ public class MouseLook : MonoBehaviour
         else { // Every object that has Item layer must have ItemHandler
             References.Instance.itemPopup.text = "";
             References.Instance.itemPopupE.SetActive(false);
+            crossHair.transform.localScale = new Vector3(1,1,1);
             clearPopup++;
         }
         
